@@ -1,0 +1,15 @@
+target
+overlays
+*.log
+*.iml
+*.ipr
+*.iws
+.idea
+.project
+.classpath
+.settings
+rebel.xml
+rebel-remote.xml
+.DS_Store
+.vale.ini
+styles/
