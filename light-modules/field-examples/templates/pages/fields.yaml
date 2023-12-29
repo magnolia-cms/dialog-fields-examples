@@ -1,0 +1,22 @@
+title: Field examples
+templateScript: /field-examples/templates/pages/fields.ftl
+renderType: freemarker
+dialog: field-examples:pages/fields
+visible: true
+
+areas: 
+  main:
+    type: list
+    maxComponents: 20
+    availableComponents:
+      input:
+        id: field-examples:components/input
+      navigational:
+        id: field-examples:components/navigational
+      informational:
+        id: field-examples:components/informational
+      containers:
+        id: field-examples:components/containers
+    inheritance:
+      enabled: true
+      components: filtered

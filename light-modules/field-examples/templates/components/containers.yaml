@@ -1,0 +1,4 @@
+title: Containers
+renderType: freemarker
+templateScript: /field-examples/templates/components/containers.ftl
+dialog: field-examples:components/containers

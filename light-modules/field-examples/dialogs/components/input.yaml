@@ -1,0 +1,319 @@
+form:
+  properties:
+    populate: false
+    checkbox:
+      $type: checkBoxField
+      label: Show title
+      buttonLabel: Select checkbox to display title
+    code:
+      $type: codeField
+      label: Code editor
+      height: 100
+      language: freemarker
+    composite:
+      $type: compositeField
+      label: Location (compositeField)
+      itemProvider:
+        $type: jcrChildNodeProvider
+      properties:
+        city:
+          label: City
+          $type: textField
+        country:
+          label: Country
+          $type: textField
+    # jsonComposite:
+    #   label:
+    #   $type: jsonCompositeField
+    #   properties:
+    #     name:
+    #       label: name
+    #       $type: textField
+    #       readOnly: true
+    #     to:
+    #       label: to
+    #       $type: textField
+    #       readOnly: true
+    #     comboBoxFieldwithJSON:
+    #       label: comboBoxField_withJSONsource
+    #       $type: comboBoxField
+    #       textInputAllowed: true
+    #       datasource:
+    #         name: rest
+    #         $type: jsonDatasource
+    #         restClient: countries
+    #         restCall: allCountries
+    #         jsonPathExpressions:
+    #           itemId: '$.name.official'
+    #           items: '$.*'
+    #           describeBy: '$.name.official'
+    date:
+      $type: dateField
+      label: Date
+      type: java.util.Date
+      time: true
+    hidden:
+      $type: hiddenField
+      label: Hidden field
+      defaultValue: external
+    link:
+      $type: linkField
+      label: Link
+      datasource:
+        $type: jcrDatasource
+        workspace: website
+    damLink:
+      $type: damLinkField
+      label: DAM link
+      textInputAllowed: true
+    pageLink:
+      $type: pageLinkField
+      label: Page link
+      textInputAllowed: true 
+      showOptions: true 
+      showOptions: true
+      textInputAllowed: true
+      converterClass: info.magnolia.ui.editor.converter.JcrNodeToPathConverter
+    externalLinkOrPageLink:
+      $type: pageLinkField
+      label: External link or page link
+      # textInputAllowed=true and showOptions=false (default) allow you to set any value (for example, an external link)
+      textInputAllowed: true
+      # this is the default chooser; you can configure your own with more or fewer columns
+      chooserId: ui-framework-jcr:chooser
+    resourceLink:
+      $type: resourceLinkField
+      label: Resource link
+      showOptions: true
+      textInputAllowed: true
+    # jsonLink:
+    #   $type: jsonLinkField
+    #   label: JSON link
+    #   datasource:
+    #     name: rest
+    #     $type: jsonDatasource
+    #     restClient: countries
+    #     restCall: allCountries
+    #     jsonPathExpressions:
+    #       itemId: '$.maps.googleMaps'
+    #       items: '$.*'
+    #       describeBy: '$.maps.googleMaps'
+    assignedSegments:
+      $type: jcrMultiValueField
+      label: Multi-value field
+      field:
+        $type: comboBoxField
+        label: Path
+        datasource:
+          $type: jcrDatasource
+          workspace: website
+    jcrMultiLinkField:
+      $type: jcrMultiLinkField
+      label: Multi-link field (pages)
+      field:
+        $type: linkField
+        label: Page
+        datasource:
+          $type: jcrDatasource
+          workspace: website
+    damMultiLinkField:
+      $type: jcrMultiLinkField
+      label: Multi-link field (assets)
+      chooserId: dam-app-core:multiChooser
+      field:
+        $type: damLinkField
+        label: Asset
+    multi:
+      i18n: true
+      $type: jcrMultiField
+      label: Address list (jcrMultiField)
+      field:
+        $type: compositeField
+        label: Address
+        properties:
+          street:
+            $type: textField
+            label: Street
+          city:
+            i18n: true
+            $type: textField
+            label: City
+          zip:
+            $type: textField
+            label: ZIP code
+    # stationboard:
+    #   $type: jsonMultiField
+    #   label: JSON multi-field
+    #   itemProvider:
+    #     $type: jsonMultiFieldProvider
+    #   field:
+    #     $type: jsonCompositeField
+    #     idPropertyName: name
+    #     properties:
+    #       name:
+    #         $type: textField
+    #         readOnly: true
+    #       to:
+    #         $type: textField
+    #         readOnly: true
+    checkboxGroup:
+      $type: checkBoxGroupField
+      label: Composers (checkBoxGroupField)
+      defaultValue: # an alternative way of setting multiple default values
+        - Mahler
+        - Bach
+      datasource:
+        $type: optionListDatasource
+        options:
+          - name: Vivaldi
+            label: Vivaldi
+            value: Vivaldi
+          - name: Bach
+            label: Bach
+            value: Bach
+          - name: Bartok
+            label: Bartok
+            value: Bartok
+          - name: Stravinsky
+            label: Stravinsky
+            value: Stravinsky
+          - name: Mahler
+            label: Mahler
+            value: Mahler
+    radioGroup:
+      $type: radioButtonGroupField
+      label: Contacts
+      datasource:
+        $type: jcrDatasource
+        workspace: contacts
+        describeByProperty: lastName
+        allowedNodeTypes:
+          - mgnl:contact
+    password:
+      $type: passwordField
+      label: Password
+      required: true
+    richText:
+      $type: richTextField
+      label: Text editor
+      height: 300
+      tables: true
+      source: true
+    comboSelect:
+      $type: comboBoxField
+      label: Prefix (comboBoxField)
+      datasource:
+        $type: optionListDatasource
+        options:
+          - name: mr
+            label: Mr.
+            value: mr
+          - name: mrs
+            label: Mrs.
+            value: mrs
+          - name: miss
+            label: Miss
+            value: miss
+    comboBoxFieldwithJSON:
+      label: Country (JSON comboBoxField)
+      $type: comboBoxField
+      textInputAllowed: true
+      datasource:
+        name: rest
+        $type: jsonDatasource
+        restClient: countries
+        restCall: allCountries
+        jsonPathExpressions:
+          itemId: '$.name.official'
+          items: '$.*'
+          describeBy: '$.name.official'
+    listSelect:
+      $type: listSelectField
+      label: Contacts (listSelectField)
+      datasource:
+        $type: jcrDatasource
+        workspace: contacts
+        describeByProperty: firstName
+        allowedNodeTypes:
+          - mgnl:contact
+    twinSelect:
+      $type: twinColSelectField
+      label: Groups (twinColSelectField)
+      leftColumnCaption: "Available groups"
+      rightColumnCaption: "User is member of"
+      datasource:
+        $type: jcrDatasource
+        workspace: usergroups
+        allowedNodeTypes:
+          - mgnl:group
+    slider:
+      $type: sliderField
+      label: Percentage (sliderField)
+      defaultValue: 50
+      stepSize: 5
+      displayStepSize: 25
+      valueFormat: PERCENTAGE
+    static:
+      $type: staticField
+      label: Description (staticField)
+      value: Used on search engine result pages...
+    switchable:
+      $type: switchableField
+      label: Foo or bar options (switchableField)
+      field:
+        $type: radioButtonGroupField
+        layout: horizontal
+        datasource:
+          $type: optionListDatasource
+          options:
+            - name: foo
+              label: Foo
+              value: foo
+            - name: bar
+              label: Bar
+              value: bar
+      itemProvider:
+        $type: jcrChildNodeProvider
+      forms:
+        - name: foo
+          properties:
+            foo:
+              $type: textField
+              label: Foo text
+        - name: bar
+          properties:
+            bar:
+              $type: richTextField
+              label: Bar rich text
+    text:
+      $type: textField 
+      label: Body (textField)
+      rows: 5
+      maxLength: 300
+    tokens:
+      $type: tokenField
+      label: Tokens (tokenField)
+      i18n: true
+      description: description
+      comboBox:
+        datasource:
+          $type: optionListDatasource
+          options:
+            - name: foo
+              label: Foo
+              value: foo
+            - name: bar
+              label: Bar
+              value: bar
+    upload:
+      $type: uploadField
+      label: Upload
+      allowedMimeTypePattern: text/xml
+    email:
+      $type: textField
+      label: Email (with emailValidator)
+      required: true
+      validators:
+        email:
+          $type: emailValidator
+          errorMessage: Enter a valid email address
