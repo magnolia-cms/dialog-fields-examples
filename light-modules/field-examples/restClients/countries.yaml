@@ -1,15 +1,6 @@
-# baseUrl: https://restcountries.com/v3.1/all
-# restCalls:
-#   allCountries:
-#     method: GET
-#     entityClass: com.fasterxml.jackson.databind.JsonNode
 baseUrl: https://restcountries.com/v3.1
-# class: info.magnolia.rest.client.ConfiguredRestClientDefinition
-# clientFactoryClass: info.magnolia.rest.client.factory.DefaultClientFactory
 restCalls:
   allCountries:
     class: info.magnolia.rest.client.call.GetRestCall
     entityClass: com.fasterxml.jackson.databind.JsonNode
     path: /all
-    # templateValues:
-    #   api: getCountries
