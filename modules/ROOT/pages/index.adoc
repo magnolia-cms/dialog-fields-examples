@@ -1,0 +1,102 @@
+= {page-component-title}
+:keywords: dialog-fields-examples
+:repo-folder: dialog-fields-examples
+
+== Light-modules folder in this repository
+
+It contains working field definitions to use out of the box. Follow the instructions below to use them in your local Magnolia installation.
+
+. Copy the `dialog-fields-examples` folder into your light-modules folder.
+. Go to the `Pages` app and add a test page using the `Field examples` template.
+. Edit the new page and add a new `Input controls` component. This opens a dialog showing all the fields available.
++
+image::dialog-fields-examples:ROOT:input-fields.png["Input controls dialog",role="zoom"]
+
+== JavaScript-generated HTML previews
+
+Go to the field pages in the navigation on the left and use the `Show dialog preview` buttons to generate the field previews inline. The script is currently in a passthrough block partial and included in copies of the product-docs field pages.
+
+.JS preview script mockup for field dialogs
+[source, html]
+----
+++++
+<style>
+.parent-button {
+  width: 100%;
+}
+
+.child-button {
+  float: left;
+  width: 50%;
+}
+
+dialog {
+  border: none !important;
+}
+</style>
+
+<br/>
+<div class='parent-button'>
+<div><button class='child-button' onclick="whichField()">Show dialog preview</button></div>
+<div><button class='child-button' onclick="clearField()">Clear dialog preview</button></div>
+</div>
+
+<br/>
+<br/>
+    <div id="dialog_insert"></div>
+<br/>
+<br/>
+
+<script>
+var dialog_checkbox = [
+    '<dialog open>',
+      '<form method="dialog">',
+      '<label style="font-family: Arial">',
+        'Show title:',
+        '<input type="checkbox" id="dialog_checkbox">',
+        '<label for="dialog_checkbox" style="font-family: Arial"> Select to display title</label>',
+        '</input>',
+      '</label>',
+      '</form>',
+    '</dialog>'
+].join("\n");
+
+var dialog_code = [
+    '<dialog open>',
+      '<form method="dialog">',
+      '<p><label for="dialog_code" style="font-family: Arial">',
+        'Code editor: </label></p>',
+        '<textarea id="dialog_code" rows="4" cols="50" >',
+        '</textarea>',
+      '</form>',
+    '</dialog>',
+    '<br/>',
+    '<br/>',
+    '<br/>'
+].join("\n");
+
+var codeblock = document.evaluate("//div[@class='sect1']/h2[contains(.,'Example definition')]/ancestor::div[@class='sect1']//following-sibling::div[@class='sectionbody']//*[@data-lang = 'yml']", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+
+function whichField() {
+  if (codeblock.outerHTML.includes('checkBoxField')) {
+    genDialog('checkBoxField'); }
+  else if (codeblock.outerHTML.includes('codeField')) {
+    genDialog('codeField'); }
+}
+
+function genDialog(field) {
+  if (codeblock.outerHTML.includes('checkBoxField')) {
+    document.getElementById("dialog_insert").innerHTML = dialog_checkbox; }
+  else if (codeblock.outerHTML.includes('codeField')) {
+    document.getElementById("dialog_insert").innerHTML = dialog_code; }
+  else {
+    document.getElementById("dialog_insert").innerHTML = "No matching field example found"; }
+}
+
+function clearField() {
+  document.getElementById("dialog_insert").innerHTML = "";
+}
+
+</script>
+++++
+----
