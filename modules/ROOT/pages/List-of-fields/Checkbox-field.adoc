@@ -6,8 +6,7 @@ alternative to xref:{fields-dir}Checkbox-group-field.adoc[`CheckBoxGroupFieldDef
 [NOTE]
 ====
 This checkbox field definition is part of the _Magnolia 6 UI_ framework.
-The fully qualified class name is
-`info.magnolia.ui.field.CheckBoxFieldDefinition`.
+The fully qualified class name is [.inlineBean]#info.magnolia.ui.field.CheckBoxFieldDefinition#.
 
 If you work with the _Magnolia 5 UI_ framework, see
 xref:product-docs:ROOT:Support/Magnolia-5-UI-documentation/Dialog-definition-5-UI/Field-definition-5-UI/List-of-fields-5-UI/Checkbox-field-5-UI.adoc[Checkbox
