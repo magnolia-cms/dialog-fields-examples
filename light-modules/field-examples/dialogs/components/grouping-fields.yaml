@@ -1,0 +1,58 @@
+form:
+  properties:
+    populate: false
+    composite:
+      $type: compositeField
+      label: Location (compositeField)
+      itemProvider:
+        $type: jcrChildNodeProvider
+      properties:
+        city:
+          label: City
+          $type: textField
+        country:
+          label: Country
+          $type: textField
+    assignedSegments:
+      $type: jcrMultiValueField
+      label: Multi-value field
+      field:
+        $type: comboBoxField
+        label: Path
+        datasource:
+          $type: jcrDatasource
+          workspace: website
+    jcrMultiLinkField:
+      $type: jcrMultiLinkField
+      label: Multi-link field (pages)
+      field:
+        $type: linkField
+        label: Page
+        datasource:
+          $type: jcrDatasource
+          workspace: website
+    damMultiLinkField:
+      $type: jcrMultiLinkField
+      label: Multi-link field (assets)
+      chooserId: dam-app-core:multiChooser
+      field:
+        $type: damLinkField
+        label: Asset
+    multi:
+      i18n: true
+      $type: jcrMultiField
+      label: Address list (jcrMultiField)
+      field:
+        $type: compositeField
+        label: Address
+        properties:
+          street:
+            $type: textField
+            label: Street
+          city:
+            i18n: true
+            $type: textField
+            label: City
+          zip:
+            $type: textField
+            label: ZIP code

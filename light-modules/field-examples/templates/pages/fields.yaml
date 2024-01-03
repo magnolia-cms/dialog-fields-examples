@@ -9,14 +9,22 @@ areas:
     type: list
     maxComponents: 20
     availableComponents:
-      input:
-        id: field-examples:components/input
-      navigational:
-        id: field-examples:components/navigational
-      informational:
-        id: field-examples:components/informational
-      containers:
-        id: field-examples:components/containers
+      json-fields:
+        id: field-examples:components/json-fields
+      switchable-slider-picker:
+        id: field-examples:components/switchable-slider-picker
+      dropdown-list:
+        id: field-examples:components/dropdown-list
+      checkbox-radio-button:
+        id: field-examples:components/checkbox-radio-button
+      chooser-fields:
+        id: field-examples:components/chooser-fields
+      grouping-fields:
+        id: field-examples:components/grouping-fields
+      text-fields:
+        id: field-examples:components/text-fields
+      select-fields:
+        id: field-examples:components/select-fields
     inheritance:
       enabled: true
       components: filtered

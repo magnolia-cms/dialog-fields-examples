@@ -1,4 +1,0 @@
-title: Input controls
-renderType: freemarker
-templateScript: /field-examples/templates/components/input.ftl
-dialog: field-examples:components/input

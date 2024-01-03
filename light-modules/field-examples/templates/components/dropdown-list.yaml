@@ -1,0 +1,4 @@
+title: Dropdown lists
+renderType: freemarker
+templateScript: /field-examples/templates/components/dropdown-list.ftl
+dialog: field-examples:components/dropdown-list

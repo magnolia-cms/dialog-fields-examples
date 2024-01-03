@@ -1,0 +1,19 @@
+class: info.magnolia.ui.chooser.definition.SingleItemWorkbenchChooserDefinition
+actions:
+  choose:
+    class: info.magnolia.ui.contentapp.action.ChooseActionDefinition
+  cancel:
+    $type: closeAction
+
+workbenchChooser:
+  workbench:
+    extensionViews:
+      - name: fullTextSearch
+        class: info.magnolia.ui.chooser.definition.FullTextSearchExtensionViewDefinition
+    contentViews:
+      - name: list
+        $type: listView
+        readOnly: true
+        columns:
+          commonName: 
+            name: name.common

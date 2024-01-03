@@ -1,0 +1,24 @@
+form:
+  properties:
+    populate: false
+    link:
+      $type: linkField
+      label: Link
+      datasource:
+        $type: jcrDatasource
+        workspace: website
+    damLink:
+      $type: damLinkField
+      label: DAM link
+      textInputAllowed: true
+    externalLinkOrPageLink:
+      $type: pageLinkField
+      label: External link or page link
+      # textInputAllowed=true and showOptions=false (default) allow you to set any value (for example, an external link)
+      textInputAllowed: true
+      # this is the default chooser; you can configure your own with more or fewer columns
+      chooserId: ui-framework-jcr:chooser
+    upload:
+      $type: uploadField
+      label: Upload
+      allowedMimeTypePattern: text/xml

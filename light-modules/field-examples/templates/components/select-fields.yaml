@@ -1,0 +1,4 @@
+title: Select fields
+renderType: freemarker
+templateScript: /field-examples/templates/components/select-fields.ftl
+dialog: field-examples:components/select-fields

@@ -1,0 +1,77 @@
+form:
+  properties:
+    populate: false
+    # jsonComposite:
+    #   label: JSON composite field with a JSON datasource
+    #   $type: jsonCompositeField
+    #   datasource:
+    #     name: rest
+    #     $type: jsonDatasource
+    #     restClient: countries
+    #     restCall: allCountries
+    #     jsonPathExpressions:
+    #       toCountry: '$.name.common'
+    #   itemProvider:
+    #     $type: jsonProvider
+    #   properties:
+    #     name:
+    #       label: Name
+    #       $type: textField
+    #       # readOnly: true
+    #     toCountry:
+    #       label: To
+    #       $type: jsonLinkField
+    #       # readOnly: true
+    #       chooserId: field-examples:components/chooser
+    hidden:
+      $type: hiddenField
+      label: Hidden field
+      defaultValue: external
+    jsonLink:
+      $type: jsonLinkField
+      label: JSON link (jsonLinkField)
+      chooserId: field-examples:components/json-chooser
+      datasource:
+        name: rest
+        $type: jsonDatasource
+        restClient: countries
+        restCall: allCountries
+        jsonPathExpressions:
+          itemId: '$.name.common'
+          items: '$.*'
+          describeBy: '$.name.common'
+    # stationboard:
+    #   $type: jsonMultiField
+    #   label: JSON multi-field
+    #   itemProvider:
+    #     $type: jsonMultiFieldProvider
+    #   field:
+    #     $type: jsonCompositeField
+    #     idPropertyName: name
+    #     properties:
+    #       name:
+    #         $type: textField
+    #         readOnly: true
+    #       to:
+    #         $type: textField
+    #         readOnly: true
+    comboBoxFieldwithJSON:
+      label: Country (JSON comboBoxField)
+      $type: comboBoxField
+      textInputAllowed: true
+      datasource:
+        name: rest
+        $type: jsonDatasource
+        restClient: countries
+        restCall: allCountries
+        jsonPathExpressions:
+          itemId: '$.maps.googleMaps'
+          items: '$.*'
+          describeBy: '$.maps.googleMaps'
+          # itemId: '$.name.official'
+          # items: '$.*'
+          # describeBy: '$.name.official'
+    static:
+      $type: staticField
+      label: Description (staticField)
+      value: Used on search engine result pages...

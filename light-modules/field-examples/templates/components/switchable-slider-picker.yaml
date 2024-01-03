@@ -1,0 +1,4 @@
+title: Switchable, slider, and picker fields
+renderType: freemarker
+templateScript: /field-examples/templates/components/switchable-slider-picker.ftl
+dialog: field-examples:components/switchable-slider-picker

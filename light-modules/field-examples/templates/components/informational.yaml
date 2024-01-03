@@ -1,4 +1,0 @@
-title: Informational components
-renderType: freemarker
-templateScript: /field-examples/templates/components/informational.ftl
-dialog: field-examples:components/informational

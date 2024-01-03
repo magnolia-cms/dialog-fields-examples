@@ -1,4 +1,0 @@
-title: Navigational components
-renderType: freemarker
-templateScript: /field-examples/templates/components/navigational.ftl
-dialog: field-examples:components/navigational

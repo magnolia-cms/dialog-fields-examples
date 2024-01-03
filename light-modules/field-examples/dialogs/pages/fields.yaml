@@ -28,3 +28,75 @@ form:
       label: Description
       i18n: true
       rows: 5
+    checkbox1:
+      $type: checkBoxField
+      label: Show title
+      buttonLabel: Select to display title
+    assignedSegments1:
+      $type: jcrMultiValueField
+      field:
+        $type: comboBoxField
+        datasource:
+          $type: jcrDatasource
+          workspace: website
+    multi1:
+      i18n: true
+      $type: jcrMultiField
+      field:
+        $type: compositeField
+        properties:
+          street:
+            $type: textField
+          city:
+            i18n: true
+            $type: textField
+          zip:
+            $type: textField
+    composite1:
+      $type: compositeField
+      itemProvider:
+        $type: jcrChildNodeProvider
+      properties:
+        city:
+          label: City
+          $type: textField
+        country:
+          label: Country
+          $type: textField
+    link1:
+      $type: linkField
+      datasource:
+          $type: jcrDatasource
+          workspace: website
+    pageLink1:
+      $type: pageLinkField
+      showOptions: true
+      textInputAllowed: true
+      converterClass: info.magnolia.ui.editor.converter.JcrNodeToPathConverter
+    date1:
+      label: Date
+      $type: dateField
+      type: java.util.Date
+      time: true
+  layout:
+    $type: tabbedLayout
+    tabs:
+      tabMain:
+        label: Main tab
+        fields:
+          - name: title
+          - name: navigationTitle
+          - name: windowTitle
+          - name: hideInNav
+      tabMeta:
+        label: Metadata
+        fields:
+          - name: keywords
+          - name: description
+          - name: checkbox1
+          - name: assignedSegments1
+          - name: multi1
+          - name: composite1
+          - name: link1
+          - name: pageLink1
+          - name: date1
