@@ -1,0 +1,21 @@
+
+baseUrl: http://transport.opendata.ch/v1/
+restCalls:
+
+  stations:
+    # try: http://transport.opendata.ch/v1/locations?query=Basel
+    method: GET
+    entityClass: com.fasterxml.jackson.databind.JsonNode
+    path: '/locations'
+    queryParameters: {query: "{location}", limit: 16}
+    defaultValues:
+      location: "Basel"
+
+  stationBoard:
+    #try: http://transport.opendata.ch/v1/stationboard?station=8578143
+    method: GET
+    entityClass: com.fasterxml.jackson.databind.JsonNode
+    path: '/stationboard'
+    queryParameters: {station: "{id}", limit: 10}
+    defaultValues:
+      id: "Basel SBB"

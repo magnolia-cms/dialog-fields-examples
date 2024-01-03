@@ -1,0 +1,5 @@
+layout:
+  groups:
+    - name: content
+      apps:
+      - name: stations
