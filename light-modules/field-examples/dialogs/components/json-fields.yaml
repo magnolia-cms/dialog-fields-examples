@@ -7,21 +7,8 @@ form:
       defaultValue: external
     jsonLink:
       $type: jsonLinkField
-      label: JSON link (jsonLinkField)
+      label: JSON Google Maps link (jsonLinkField)
       chooserId: field-examples:components/json-chooser
-      datasource:
-        name: rest
-        $type: jsonDatasource
-        restClient: countries
-        restCall: allCountries
-        jsonPathExpressions:
-          itemId: '$.name.common'
-          items: '$.*'
-          describeBy: '$.name.common'
-    comboBoxFieldwithJSON:
-      label: Country (JSON comboBoxField)
-      $type: comboBoxField
-      textInputAllowed: true
       datasource:
         name: rest
         $type: jsonDatasource
@@ -31,6 +18,20 @@ form:
           itemId: '$.maps.googleMaps'
           items: '$.*'
           describeBy: '$.maps.googleMaps'
+    comboBoxFieldwithJSON:
+      label: Country (JSON comboBoxField)
+      $type: comboBoxField
+      textInputAllowed: true
+      filteringMode: CONTAINS
+      datasource:
+        name: rest
+        $type: jsonDatasource
+        restClient: countries
+        restCall: allCountries
+        jsonPathExpressions:
+          itemId: '$.name.common'
+          items: '$.*'
+          describeBy: '$.name.common'
           # itemId: '$.name.official'
           # items: '$.*'
           # describeBy: '$.name.official'

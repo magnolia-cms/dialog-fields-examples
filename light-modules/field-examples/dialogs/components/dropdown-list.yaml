@@ -4,15 +4,16 @@ form:
     pageLink:
       $type: pageLinkField
       label: Page link
-      textInputAllowed: true 
-      showOptions: true 
-      textInputAllowed: true
+      showOptions: true
+      textInputAllowed: true  
+      filteringMode: CONTAINS
       converterClass: info.magnolia.ui.editor.converter.JcrNodeToPathConverter
     resourceLink:
       $type: resourceLinkField
       label: Resource link
       showOptions: true
       textInputAllowed: true
+      filteringMode: CONTAINS
     comboSelect:
       $type: comboBoxField
       label: Prefix (comboBoxField)

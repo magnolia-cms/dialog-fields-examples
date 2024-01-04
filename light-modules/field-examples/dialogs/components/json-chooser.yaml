@@ -7,9 +7,6 @@ actions:
 
 workbenchChooser:
   workbench:
-    extensionViews:
-      - name: fullTextSearch
-        class: info.magnolia.ui.chooser.definition.FullTextSearchExtensionViewDefinition
     contentViews:
       - name: list
         $type: listView
@@ -17,3 +14,4 @@ workbenchChooser:
         columns:
           commonName: 
             name: name.common
+            # Column filtering is not supported in REST-based elements of the UI.
