@@ -2,15 +2,26 @@
 :keywords: dialog-fields-examples
 :repo-folder: dialog-fields-examples
 
-== Light-modules folder in this repository
+== Field examples in the `light-modules` folder
 
 It contains working field definitions to use out of the box. Follow the instructions below to use them in your local Magnolia installation.
 
 . Copy the `dialog-fields-examples` folder into your light-modules folder.
 . Go to the `Pages` app and add a test page using the `Field examples` template.
-. Edit the new page and add a new `Input controls` component. This opens a dialog showing all the fields available.
+. Edit the new page and add a new component. This opens a dialog showing all the component types available.
 +
-image::dialog-fields-examples:ROOT:input-fields.png["Input controls dialog",role="zoom"]
+image::dialog-fields-examples:ROOT:field-examples_component-types.png["Add component dialog",role="zoom"]
+. After selecting a component type and clicking `Next`, the respective dialog fields are shown (for example, see the switchable, slider, and picker fields below). You can change the values, save them, and then edit them again later.
++
+image::dialog-fields-examples:ROOT:field-examples_switchable-slider-picker-fields.png["Switchable, slider, and picker fields",role="zoom"]
+
+== Station app example in the `light-modules` folder
+
+You can find examples of xref:product-docs:ROOT:Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Multi-field.adoc#_example_definitions[jsonMultiField] and xref:product-docs:ROOT:Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Composite-field.adoc#_json_composite_field[jsonCompositeField] in an announcement board app called `Stations`. You can't copy either field example from the documentation pages and use them as-is directly into a field dialog definition. The `itemProvider` needed for each field has specific requirements outlined in xref:product-docs:ROOT:Developing/Templating/Dialog-definition/Field-definition/Item-providers.adoc#_for_json_data_source[Provider types]. For example, `jsonMultiField` is only suitable for sub-forms because it relies on a parent.
+
+The `Stations` app should be installed on your local installation if you copy across the `dialog-fields-examples` folder because it contains a decoration for the `admincentral` module. The app uses `jsonMultiField` and `jsonCompositeField` to retrieve items from a REST JSON datasource (`transportation.yaml`) and then display three properties (`name`, `to`, and `operator`) for each item.
+
+image::dialog-fields-examples:ROOT:stations_view-station.png["View station page",role="zoom"]
 
 == JavaScript-generated HTML previews
 
