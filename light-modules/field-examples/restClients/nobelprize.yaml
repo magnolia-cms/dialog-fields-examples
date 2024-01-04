@@ -1,0 +1,7 @@
+baseUrl: http://api.nobelprize.org/2.0
+restCalls:
+  allPrizes:
+    class: info.magnolia.rest.client.call.GetRestCall
+    entityClass: com.fasterxml.jackson.databind.JsonNode
+    path: /nobelPrizes
+    iterableSupport: true

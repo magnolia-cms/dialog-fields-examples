@@ -1,0 +1,67 @@
+form:
+  properties:
+    populate: false
+    hidden:
+      $type: hiddenField
+      label: Hidden field
+      defaultValue: external
+    jsonLink:
+      $type: jsonLinkField
+      label: JSON Google Maps link (jsonLinkField)
+      chooserId: field-examples:components/json-chooser
+      datasource:
+        name: rest
+        $type: jsonDatasource
+        restClient: countries
+        restCall: allCountries
+        jsonPathExpressions:
+          itemId: '$.maps.googleMaps'
+          items: '$.*'
+          describeBy: '$.maps.googleMaps'
+    comboBoxFieldwithJSON:
+      label: Country (JSON comboBoxField)
+      $type: comboBoxField
+      textInputAllowed: true
+      filteringMode: CONTAINS
+      datasource:
+        name: rest
+        $type: jsonDatasource
+        restClient: countries
+        restCall: allCountries
+        jsonPathExpressions:
+          itemId: '$.name.common'
+          items: '$.*'
+          describeBy: '$.name.common'
+          # itemId: '$.name.official'
+          # items: '$.*'
+          # describeBy: '$.name.official'
+    static:
+      $type: staticField
+      label: Description (staticField)
+      value: Used on search engine result pages...
+    # jsonComposite:
+    #   $type: jsonCompositeField
+    #   idPropertyName: name
+    #   properties:
+    #     name:
+    #       label: name
+    #       $type: textField
+    #       readOnly: true
+    #     to:
+    #       label: to
+    #       $type: textField
+    #       readOnly: true
+    # stationboard:
+    #   $type: jsonMultiField
+    #   itemProvider:
+    #     $type: jsonMultiFieldProvider
+    #   field:
+    #     $type: jsonCompositeField
+    #     idPropertyName: name
+    #     properties:
+    #       name:
+    #         $type: textField
+    #         readOnly: true
+    #       to:
+    #         $type: textField
+    #         readOnly: true

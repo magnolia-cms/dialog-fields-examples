@@ -1,0 +1,17 @@
+class: info.magnolia.ui.chooser.definition.SingleItemWorkbenchChooserDefinition
+actions:
+  choose:
+    class: info.magnolia.ui.contentapp.action.ChooseActionDefinition
+  cancel:
+    $type: closeAction
+
+workbenchChooser:
+  workbench:
+    contentViews:
+      - name: list
+        $type: listView
+        readOnly: true
+        columns:
+          commonName: 
+            name: name.common
+            # Column filtering is not supported in REST-based elements of the UI.

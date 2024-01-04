@@ -1,0 +1,4 @@
+title: Checkboxes and radio buttons
+renderType: freemarker
+templateScript: /field-examples/templates/components/checkbox-radio-button.ftl
+dialog: field-examples:components/checkbox-radio-button

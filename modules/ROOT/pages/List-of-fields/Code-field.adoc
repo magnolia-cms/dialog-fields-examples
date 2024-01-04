@@ -1,0 +1,45 @@
+= Code field
+
+`CodeFieldDefinition` renders a rich code editor.
+
+[NOTE]
+====
+This code field definition is part of the _Magnolia 6 UI_ framework. The fully qualified class name is `info.magnolia.ui.field.CodeFieldDefinition`.
+
+If you work with the _Magnolia 5 UI_ framework, see xref:Support/Magnolia-5-UI-documentation/Dialog-definition-5-UI/Field-definition-5-UI/List-of-fields-5-UI/Code-field-5-UI.adoc[Code field for _Magnolia 5 UI_] instead.
+====
+
+== Example definition
+
+[source,yml]
+----
+code:
+  $type: codeField
+  label: Code editor
+  height: 500
+  language: freemarker
+----
+
+include::dialog-fields-examples:ROOT:partial$JS-preview-block.adoc[]
+
+== Field properties
+
+=== Field-specific properties
+
+[cols="3,7a"]
+|===
+|Property|Description
+
+|`height`
+|**optional**, _default is ``300``_
+
+Height of the field. This property accepts an integer (to denote a value in pixels).
+
+|`language`
+|**optional**
+
+Language used for syntax highlighting. See link:https://github.com/ahn/vaadin-aceeditor/blob/v0.8.15/aceeditor/src/main/java/org/vaadin/aceeditor/AceMode.java#L9[`AceMode.java`^] for a full list of values.
+
+|===
+
+include::partial$i/_Common-simple-field-properties.adoc[leveloffset=+2]

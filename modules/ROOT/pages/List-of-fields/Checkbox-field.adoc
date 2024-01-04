@@ -1,0 +1,118 @@
+= Checkbox field
+
+`CheckBoxFieldDefinition` renders a single checkbox. It is a simpler
+alternative to xref:{fields-dir}Checkbox-group-field.adoc[`CheckBoxGroupFieldDefinition`].
+
+[NOTE]
+====
+This checkbox field definition is part of the _Magnolia 6 UI_ framework.
+The fully qualified class name is [.inlineBean]#info.magnolia.ui.field.CheckBoxFieldDefinition#.
+
+If you work with the _Magnolia 5 UI_ framework, see
+xref:product-docs:ROOT:Support/Magnolia-5-UI-documentation/Dialog-definition-5-UI/Field-definition-5-UI/List-of-fields-5-UI/Checkbox-field-5-UI.adoc[Checkbox
+field for _Magnolia 5 UI_] instead.
+====
+
+== Example definition
+
+[source,yml]
+----
+checkbox:
+  $type: checkBoxField
+  label: Show title
+  buttonLabel: Select to display title
+----
+
+include::dialog-fields-examples:ROOT:partial$JS-preview-block.adoc[]
+
+== Field properties
+
+=== Field-specific properties
+
+[cols="3,7a"]
+|===
+|Property |Description
+
+|`buttonLabel`
+|**required**
+
+Label displayed next to the checkbox. The value is
+xref:product-docs:ROOT:Administration/Language/Internationalization.adoc#_i18n_message_keys[i18n]-able.
+
+If you do not want to have any label, set the property to an empty
+string in YAML or in a
+xref:product-docs:ROOT:Administration/Language/Internationalization.adoc#_i18n_message_bundle[message
+bundle].
+
+|===
+
+include::partial$i/_Common-simple-field-properties.adoc[leveloffset=+2]
+
+== Example scenario
+
+The xref:product-docs:ROOT:Modules/List-of-modules/Form-module.adoc#_fields[formFile] component enables developers to add an upload field to forms. Adding it would result in the following component dialog in the Pages app without any alteration to the out-of-the-box setup.
+
+image:product-docs:ROOT:6-2-formFile_Pages-app.png[formFile in Pages app,width=600,role="zoom"]
+
+In some cases, you want to validate whether a file has been uploaded and display an error message if no file is uploaded when the completed form is submitted. A checkbox can be added to the template by using decorations. A walk-through of important aspects of this scenario is given below:
+
+* The YAML excerpt below adds a `formFile` to the respective template's `main` area.
++
+[source,yaml]
+----
+...
+areas:
+  main:
+    availableComponents:
+      formFile:
+        id: form:components/formFile
+...
+----
+
+* The xref:product-docs:ROOT:Developing/Templating/Template-scripts/Directives.adoc#_example_of_directive_rendering[`cms.area` directive] in the FTL file calls the main area to be rendered in the excerpt below.
++
+[source,yaml]
+----
+    ...
+    <div class="container">
+      [@cms.area name="main" /]
+    </div>
+    ...
+----
+* The `Label` dialog for the `formFile` component at the beginning of this section does not need to be specified and is part of the xref:product-docs:ROOT:Modules/List-of-modules/Form-module.adoc[Form module], which is bundled with both the community edition and DX Core.
+* In order to add a checkbox to the dialog, a xref:product-docs:ROOT:Developing/Definition-decoration.adoc[decoration] YAML file is necessary in the xref:product-docs:ROOT:Modules/Light-modules.adoc[light modules] folder, such as the example shown below.
++
+[source,yaml]
+.my-module/decorations/form/dialogs/formFile.yaml
+----
+form:
+    tabs:
+        tabMain:
+            fields: !override
+                mandatory:
+                    type: Boolean
+                    class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+                    defaultValue: false
+                    name: mandatory
+                validation:
+                    class: info.magnolia.ui.form.field.definition.TwinColSelectFieldDefinition
+                    path: /modules/form/config/validators
+                    repository: config
+----
+* Adding the decoration creates a new field in the component dialog as shown below.
++
+image:product-docs:ROOT:6-2-formFile_decoration_Pages-app.png[formFile in Pages app,width=600,role="zoom"]
+* Use of xref:product-docs:ROOT:Developing/Templating/Rendering-content/Model.adoc#_how_does_a_model_work[model objects], for which all public methods of any Java model class may be accessed from template scripts, allows developers to check fields. For example, whether the field is valid and displaying the `requiredSymbol` in the rendered form if the `mandatory` checkbox in its component dialog is selected. An example FTL snippet to do these checks and rendering is given below.
++
+[source,yaml]
+.my-module/templates/components/formFile.ftl
+----
+    ...
+    [#if !model.isValid()]
+        <em>${i18n['form.error.field']}</em>
+    [/#if]
+    [#if content.mandatory!false]
+        <dfn title="required">${model.requiredSymbol!}</dfn>
+    [/#if]
+    ...
+----

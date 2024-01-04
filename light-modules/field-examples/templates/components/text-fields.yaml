@@ -1,0 +1,4 @@
+title: Text fields
+renderType: freemarker
+templateScript: /field-examples/templates/components/text-fields.ftl
+dialog: field-examples:components/text-fields

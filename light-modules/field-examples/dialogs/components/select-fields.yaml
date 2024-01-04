@@ -1,0 +1,37 @@
+form:
+  properties:
+    populate: false
+    listSelect:
+      $type: listSelectField
+      label: Contacts (listSelectField)
+      datasource:
+        $type: jcrDatasource
+        workspace: contacts
+        describeByProperty: firstName
+        allowedNodeTypes:
+          - mgnl:contact
+    twinSelect:
+      $type: twinColSelectField
+      label: Groups (twinColSelectField)
+      leftColumnCaption: "Available groups"
+      rightColumnCaption: "User is member of"
+      datasource:
+        $type: jcrDatasource
+        workspace: usergroups
+        allowedNodeTypes:
+          - mgnl:group
+    tokens:
+      $type: tokenField
+      label: Tokens (tokenField)
+      i18n: true
+      description: description
+      comboBox:
+        datasource:
+          $type: optionListDatasource
+          options:
+            - name: foo
+              label: Foo
+              value: foo
+            - name: bar
+              label: Bar
+              value: bar

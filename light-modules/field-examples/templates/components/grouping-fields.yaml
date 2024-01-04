@@ -1,0 +1,4 @@
+title: Grouping fields
+renderType: freemarker
+templateScript: /field-examples/templates/components/grouping-fields.ftl
+dialog: field-examples:components/grouping-fields

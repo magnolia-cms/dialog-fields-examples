@@ -1,0 +1,30 @@
+title: Field examples
+templateScript: /field-examples/templates/pages/fields.ftl
+renderType: freemarker
+dialog: field-examples:pages/fields
+visible: true
+
+areas: 
+  main:
+    type: list
+    maxComponents: 20
+    availableComponents:
+      json-fields:
+        id: field-examples:components/json-fields
+      switchable-slider-picker:
+        id: field-examples:components/switchable-slider-picker
+      dropdown-list:
+        id: field-examples:components/dropdown-list
+      checkbox-radio-button:
+        id: field-examples:components/checkbox-radio-button
+      chooser-fields:
+        id: field-examples:components/chooser-fields
+      grouping-fields:
+        id: field-examples:components/grouping-fields
+      text-fields:
+        id: field-examples:components/text-fields
+      select-fields:
+        id: field-examples:components/select-fields
+    inheritance:
+      enabled: true
+      components: filtered

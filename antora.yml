@@ -1,0 +1,15 @@
+name: dialog-fields-examples
+title: Visual previews of fields in the documentation
+version: 'master'
+nav:
+  - modules/ROOT/nav.adoc
+
+asciidoc:
+  attributes:
+    # group-id: info.magnolia.mx
+    # artifact-id: magnolia-mx-core@
+    # modules-version: 'master'
+    # jira-project: MX
+    # nexus-link:
+    # nexus-name:
+    # git: https://git.magnolia-cms.com/projects/ENTERPRISE/repos/mx/browse

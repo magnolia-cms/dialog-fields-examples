@@ -1,0 +1,4 @@
+title: JSON datasource fields
+renderType: freemarker
+templateScript: /field-examples/templates/components/json-fields.ftl
+dialog: field-examples:components/json-fields

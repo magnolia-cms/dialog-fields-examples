@@ -1,0 +1,31 @@
+form:
+  properties:
+    populate: false
+    code:
+      $type: codeField
+      label: Code editor
+      height: 100
+      language: freemarker
+    password:
+      $type: passwordField
+      label: Password
+      required: true
+    richText:
+      $type: richTextField
+      label: Text editor
+      height: 300
+      tables: true
+      source: true
+    text:
+      $type: textField 
+      label: Body (textField)
+      rows: 5
+      maxLength: 300
+    email:
+      $type: textField
+      label: Email (with emailValidator)
+      required: true
+      validators:
+        email:
+          $type: emailValidator
+          errorMessage: Enter a valid email address

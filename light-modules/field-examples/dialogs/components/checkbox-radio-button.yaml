@@ -1,0 +1,40 @@
+form:
+  properties:
+    populate: false
+    checkbox:
+      $type: checkBoxField
+      label: Show title
+      buttonLabel: Select checkbox to display title
+    checkboxGroup:
+      $type: checkBoxGroupField
+      label: Composers (checkBoxGroupField)
+      defaultValue: # an alternative way of setting multiple default values
+        - Mahler
+        - Bach
+      datasource:
+        $type: optionListDatasource
+        options:
+          - name: Vivaldi
+            label: Vivaldi
+            value: Vivaldi
+          - name: Bach
+            label: Bach
+            value: Bach
+          - name: Bartok
+            label: Bartok
+            value: Bartok
+          - name: Stravinsky
+            label: Stravinsky
+            value: Stravinsky
+          - name: Mahler
+            label: Mahler
+            value: Mahler
+    radioGroup:
+      $type: radioButtonGroupField
+      label: Contacts
+      datasource:
+        $type: jcrDatasource
+        workspace: contacts
+        describeByProperty: lastName
+        allowedNodeTypes:
+          - mgnl:contact

@@ -1,0 +1,3 @@
+title: Wiki example
+templateScript: /field-examples/templates/components/wiki/onthisday.ftl
+renderType: freemarker

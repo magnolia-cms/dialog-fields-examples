@@ -1,0 +1,102 @@
+appClass: info.magnolia.ui.framework.app.BaseApp
+icon: icon-content-app
+class: info.magnolia.ui.contentapp.configuration.ContentAppDescriptor
+label: Stations
+name: stations
+subApps:
+  browser:
+    class: info.magnolia.ui.contentapp.configuration.BrowserDescriptor
+
+    datasource:
+      $type: jsonDatasource
+      restClient: transportation
+      restCall: stations
+      jsonPathExpressions:
+        itemId: '$.id'
+        items: '$.stations'
+        describeBy: '$.name'
+
+    workbench:
+      contentViews:
+        - name: list
+          $type: listView
+          columns:
+            - name: name
+              label: Name
+            - name: id
+              label: ID
+    actionbar:
+      sections:
+        article:
+          groups:
+            view:
+              items:
+                - name: viewItem
+          availability:
+            root: false
+      defaultAction: viewItem
+
+    actions:
+      viewItem:
+        $type: openDetailSubappAction
+        label: View
+        icon: icon-view
+        appName: stations
+        subAppName: view
+        viewType: edit
+
+
+  view:
+    label: View Station
+    class: info.magnolia.ui.contentapp.detail.DetailDescriptor
+    datasource:
+      $type: jsonDatasource
+      restClient: transportation
+      restCall: stationBoard
+      jsonPathExpressions:
+        properties:
+          station_name: '$.station.name'
+          station_id: '$.station.id'
+          stationboard: '$.stationboard'
+
+    actions:
+      cancel:
+        label: Cancel
+        $type: closeAction
+    itemProvider:
+      $type: jsonProvider
+    form:
+      properties:
+
+        station_name:
+          label: Name
+          $type: textField
+          readOnly: true
+
+        station_id:
+          label: ID
+          $type: textField
+          readOnly: true
+
+        # multiField
+        stationboard:
+          label: Station Board
+          $type: jsonMultiField
+          itemProvider:
+            $type: jsonMultiFieldProvider
+          field:
+            $type: jsonCompositeField
+            idPropertyName: name
+            properties:
+              name:
+                label: name
+                $type: textField
+                readOnly: true
+              to:
+                label: to
+                $type: textField
+                readOnly: true
+              operator:
+                label: operator
+                $type: textField
+                readOnly: true

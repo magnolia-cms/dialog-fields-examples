@@ -1,0 +1,2 @@
+class: info.magnolia.openapi.client.OpenApiRestClientDefinition
+schemaUrl: https://en.wikipedia.org/api/rest_v1/?spec

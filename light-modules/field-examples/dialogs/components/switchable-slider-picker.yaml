@@ -1,0 +1,43 @@
+form:
+  properties:
+    populate: false
+    date:
+      $type: dateField
+      label: Date
+      type: java.util.Date
+      time: true
+    switchable:
+      $type: switchableField
+      label: Foo or bar options (switchableField)
+      field:
+        $type: radioButtonGroupField
+        layout: horizontal
+        datasource:
+          $type: optionListDatasource
+          options:
+            - name: foo
+              label: Foo
+              value: foo
+            - name: bar
+              label: Bar
+              value: bar
+      itemProvider:
+        $type: jcrChildNodeProvider
+      forms:
+        - name: foo
+          properties:
+            foo:
+              $type: textField
+              label: Foo text
+        - name: bar
+          properties:
+            bar:
+              $type: richTextField
+              label: Bar rich text
+    slider:
+      $type: sliderField
+      label: Percentage (sliderField)
+      defaultValue: 50
+      stepSize: 5
+      displayStepSize: 25
+      valueFormat: PERCENTAGE
