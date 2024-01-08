@@ -1,0 +1,5 @@
+date:
+  $type: dateField
+  label: Date
+  type: java.util.Date
+  time: true

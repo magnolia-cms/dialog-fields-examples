@@ -1,0 +1,4 @@
+upload:
+  $type: uploadField
+  label: Upload
+  allowedMimeTypePattern: text/xml

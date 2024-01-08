@@ -1,0 +1,14 @@
+comboBoxFieldwithJSON:
+  label: Country (JSON comboBoxField)
+  $type: jsonComboBoxField
+  textInputAllowed: true
+  filteringMode: CONTAINS
+  datasource:
+    name: rest
+    $type: jsonDatasource
+    restClient: countries
+    restCall: allCountries
+    jsonPathExpressions:
+      itemId: '$.name.common'
+      items: '$.*'
+      describeBy: '$.name.common'

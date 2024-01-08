@@ -1,0 +1,9 @@
+assignedSegments:
+  $type: jcrMultiValueField
+  label: Multi-value field
+  field:
+    $type: comboBoxField
+    label: Path
+    datasource:
+      $type: jcrDatasource
+      workspace: website

@@ -1,6 +1,8 @@
 form:
   properties:
     populate: false
+    # Start of the listSelectField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/List-field.html#_example_definition
     listSelect:
       $type: listSelectField
       label: Contacts (listSelectField)
@@ -10,6 +12,9 @@ form:
         describeByProperty: firstName
         allowedNodeTypes:
           - mgnl:contact
+    # End of listSelectField example in the docs
+    # Start of the twinColSelectField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Twin-column-field.html#_example_definition
     twinSelect:
       $type: twinColSelectField
       label: Groups (twinColSelectField)
@@ -20,6 +25,9 @@ form:
         workspace: usergroups
         allowedNodeTypes:
           - mgnl:group
+    # End of twinColSelectField example in the docs
+    # Start of the tokenField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Token-field.html#_example_definition
     tokens:
       $type: tokenField
       label: Tokens (tokenField)
@@ -35,3 +43,4 @@ form:
             - name: bar
               label: Bar
               value: bar
+    # End of tokenField example in the docs

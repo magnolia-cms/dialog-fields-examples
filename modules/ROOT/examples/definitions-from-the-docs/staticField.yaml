@@ -1,0 +1,4 @@
+static:
+  $type: staticField
+  label: Description (staticField)
+  value: Used on search engine result pages...

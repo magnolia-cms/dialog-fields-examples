@@ -1,0 +1,13 @@
+jsonLink:
+  $type: jsonLinkField
+  label: JSON Google Maps link (jsonLinkField)
+  chooserId: field-examples:components/json-chooser
+  datasource:
+    name: rest
+    $type: jsonDatasource
+    restClient: countries
+    restCall: allCountries
+    jsonPathExpressions:
+      itemId: '$.maps.googleMaps'
+      items: '$.*'
+      describeBy: '$.maps.googleMaps'

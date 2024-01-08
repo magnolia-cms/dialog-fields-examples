@@ -1,0 +1,4 @@
+checkbox:
+  $type: checkBoxField
+  label: Show title
+  buttonLabel: Select checkbox to display title

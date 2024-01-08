@@ -1,0 +1,15 @@
+comboSelect:
+  $type: comboBoxField
+  label: Prefix (comboBoxField)
+  datasource:
+    $type: optionListDatasource
+    options:
+      - name: mr
+        label: Mr.
+        value: mr
+      - name: mrs
+        label: Mrs.
+        value: mrs
+      - name: miss
+        label: Miss
+        value: miss

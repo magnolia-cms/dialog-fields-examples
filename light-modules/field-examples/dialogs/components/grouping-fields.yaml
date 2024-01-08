@@ -1,6 +1,8 @@
 form:
   properties:
     populate: false
+    # Start of the compositeField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Composite-field.html#_composite_field
     composite:
       $type: compositeField
       label: Location (compositeField)
@@ -13,6 +15,9 @@ form:
         country:
           label: Country
           $type: textField
+    # End of compositeField example in the docs
+    # Start of the jcrMultiValueField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Multi-field.html#_example_definitions
     assignedSegments:
       $type: jcrMultiValueField
       label: Multi-value field
@@ -22,6 +27,9 @@ form:
         datasource:
           $type: jcrDatasource
           workspace: website
+    # End of jcrMultiValueField example in the docs
+    # Start of the jcrMultiLinkField examples in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Multi-field.html#_example_definitions
     jcrMultiLinkField:
       $type: jcrMultiLinkField
       label: Multi-link field (pages)
@@ -38,6 +46,9 @@ form:
       field:
         $type: damLinkField
         label: Asset
+    # End of jcrMultiLinkField examples in the docs
+    # Start of the jcrMultiField examples in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Multi-field.html#_example_definitions
     multi:
       i18n: true
       $type: jcrMultiField
@@ -56,3 +67,4 @@ form:
           zip:
             $type: textField
             label: ZIP code
+    # End of jcrMultiField example in the docs

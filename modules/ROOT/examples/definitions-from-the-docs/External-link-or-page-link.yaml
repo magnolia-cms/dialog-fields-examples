@@ -1,0 +1,8 @@
+externalLinkOrPageLink:
+  $type: pageLinkField
+  label: External link or page link
+  # textInputAllowed=true and showOptions=false (default) allow you to set any value (for example, an external link)
+  textInputAllowed: true
+  filteringMode: CONTAINS
+  # this is the default chooser; you can configure your own with more or fewer columns
+  chooserId: ui-framework-jcr:chooser

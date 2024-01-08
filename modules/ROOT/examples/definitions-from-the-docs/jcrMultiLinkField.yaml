@@ -1,0 +1,16 @@
+jcrMultiLinkField:
+  $type: jcrMultiLinkField
+  label: Multi-link field (pages)
+  field:
+    $type: linkField
+    label: Page
+    datasource:
+      $type: jcrDatasource
+      workspace: website
+damMultiLinkField:
+  $type: jcrMultiLinkField
+  label: Multi-link field (assets)
+  chooserId: dam-app-core:multiChooser
+  field:
+    $type: damLinkField
+    label: Asset

@@ -1,0 +1,10 @@
+twinSelect:
+  $type: twinColSelectField
+  label: Groups (twinColSelectField)
+  leftColumnCaption: "Available groups"
+  rightColumnCaption: "User is member of"
+  datasource:
+    $type: jcrDatasource
+    workspace: usergroups
+    allowedNodeTypes:
+      - mgnl:group

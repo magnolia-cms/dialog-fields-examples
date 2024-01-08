@@ -1,10 +1,15 @@
 form:
   properties:
     populate: false
+    # Start of the checkBoxField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Checkbox-field.html#_example_definition
     checkbox:
       $type: checkBoxField
       label: Show title
       buttonLabel: Select checkbox to display title
+    # End of checkBoxField example in the docs
+    # Start of the checkBoxGroupField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Checkbox-group-field.html#_example_definition
     checkboxGroup:
       $type: checkBoxGroupField
       label: Composers (checkBoxGroupField)
@@ -29,6 +34,9 @@ form:
           - name: Mahler
             label: Mahler
             value: Mahler
+    # End of checkBoxGroupField example in the docs
+    # Start of the radioButtonGroupField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Radio-button-group-field.html#_example_definition
     radioGroup:
       $type: radioButtonGroupField
       label: Contacts
@@ -38,3 +46,4 @@ form:
         describeByProperty: lastName
         allowedNodeTypes:
           - mgnl:contact
+    # End of radioButtonGroupField example in the docs

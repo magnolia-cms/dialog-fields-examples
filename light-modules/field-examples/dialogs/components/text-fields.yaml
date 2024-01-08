@@ -1,26 +1,35 @@
 form:
   properties:
     populate: false
+    # Start of the codeField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Code-field.html#_example_definition
     code:
       $type: codeField
       label: Code editor
       height: 100
       language: freemarker
+    # End of codeField example in the docs
     password:
       $type: passwordField
       label: Password
       required: true
+    # Start of the richTextField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Rich-text-field.html#_example_definition
     richText:
       $type: richTextField
       label: Text editor
       height: 300
       tables: true
       source: true
+    # End of richTextField example in the docs
+    # Start of the textField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Text-field.html#_example_definition
     text:
       $type: textField 
       label: Body (textField)
       rows: 5
       maxLength: 300
+    # End of textField example in the docs
     email:
       $type: textField
       label: Email (with emailValidator)
@@ -29,3 +38,17 @@ form:
         email:
           $type: emailValidator
           errorMessage: Enter a valid email address
+    # Start of the hiddenField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Hidden-field.html#_example_definition
+    hidden:
+      $type: hiddenField
+      label: Hidden field
+      defaultValue: external
+    # End of hiddenField example in the docs
+    # Start of the staticField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Static-field.html#_example_definition
+    static:
+      $type: staticField
+      label: Description (staticField)
+      value: Used on search engine result pages...
+    # End of staticField example in the docs

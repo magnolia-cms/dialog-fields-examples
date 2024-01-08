@@ -78,12 +78,15 @@ subApps:
           $type: textField
           readOnly: true
 
-        # multiField
-        stationboard:
+    # Start of the jsonMultiField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Multi-field.html#_example_definitions
+    stationboard:
           label: Station Board
           $type: jsonMultiField
           itemProvider:
             $type: jsonMultiFieldProvider
+          # Start of the jsonCompositeField example in the docs
+          # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Composite-field.html#_json_composite_field
           field:
             $type: jsonCompositeField
             idPropertyName: name
@@ -100,3 +103,5 @@ subApps:
                 label: operator
                 $type: textField
                 readOnly: true
+          # End of jsonCompositeField example in the docs
+    # End of jsonMultiField example in the docs

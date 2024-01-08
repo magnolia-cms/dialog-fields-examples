@@ -1,10 +1,8 @@
 form:
   properties:
     populate: false
-    hidden:
-      $type: hiddenField
-      label: Hidden field
-      defaultValue: external
+    # Start of the jsonLinkField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Link-field.html#_example_definitions
     jsonLink:
       $type: jsonLinkField
       label: JSON Google Maps link (jsonLinkField)
@@ -18,9 +16,12 @@ form:
           itemId: '$.maps.googleMaps'
           items: '$.*'
           describeBy: '$.maps.googleMaps'
+    # End of jsonLinkField example in the docs
+    # Start of the jsonComboBoxField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Combobox-field.html#_json_combobox_field
     comboBoxFieldwithJSON:
       label: Country (JSON comboBoxField)
-      $type: comboBoxField
+      $type: jsonComboBoxField
       textInputAllowed: true
       filteringMode: CONTAINS
       datasource:
@@ -32,13 +33,10 @@ form:
           itemId: '$.name.common'
           items: '$.*'
           describeBy: '$.name.common'
+    # End of jsonComboBoxField example in the docs
           # itemId: '$.name.official'
           # items: '$.*'
           # describeBy: '$.name.official'
-    static:
-      $type: staticField
-      label: Description (staticField)
-      value: Used on search engine result pages...
     # jsonComposite:
     #   $type: jsonCompositeField
     #   idPropertyName: name

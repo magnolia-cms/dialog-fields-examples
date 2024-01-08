@@ -1,0 +1,15 @@
+tokens:
+  $type: tokenField
+  label: Tokens (tokenField)
+  i18n: true
+  description: description
+  comboBox:
+    datasource:
+      $type: optionListDatasource
+      options:
+        - name: foo
+          label: Foo
+          value: foo
+        - name: bar
+          label: Bar
+          value: bar

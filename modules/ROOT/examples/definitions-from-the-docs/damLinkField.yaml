@@ -1,0 +1,5 @@
+damLink:
+  $type: damLinkField
+  label: DAM link
+  textInputAllowed: true
+  filteringMode: CONTAINS
