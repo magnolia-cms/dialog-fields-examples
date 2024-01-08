@@ -1,0 +1,9 @@
+listSelect:
+  $type: listSelectField
+  label: Contacts (listSelectField)
+  datasource:
+    $type: jcrDatasource
+    workspace: contacts
+    describeByProperty: firstName
+    allowedNodeTypes:
+      - mgnl:contact

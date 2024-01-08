@@ -1,0 +1,6 @@
+link:
+  $type: linkField
+  label: Link
+  datasource:
+    $type: jcrDatasource
+    workspace: website

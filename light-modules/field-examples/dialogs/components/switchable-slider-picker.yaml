@@ -1,11 +1,16 @@
 form:
   properties:
     populate: false
+    # Start of the dateField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Date-field.html#_example_definition
     date:
       $type: dateField
       label: Date
       type: java.util.Date
       time: true
+    # End of dateField example in the docs
+    # Start of the switchableField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Switchable-field.html#_example_definition
     switchable:
       $type: switchableField
       label: Foo or bar options (switchableField)
@@ -34,6 +39,9 @@ form:
             bar:
               $type: richTextField
               label: Bar rich text
+    # End of switchableField example in the docs
+    # Start of the sliderField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Slider-field.html#_example_definition
     slider:
       $type: sliderField
       label: Percentage (sliderField)
@@ -41,3 +49,4 @@ form:
       stepSize: 5
       displayStepSize: 25
       valueFormat: PERCENTAGE
+    # End of sliderField example in the docs

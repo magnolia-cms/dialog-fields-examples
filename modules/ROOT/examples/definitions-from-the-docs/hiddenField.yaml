@@ -1,0 +1,4 @@
+hidden:
+  $type: hiddenField
+  label: Hidden field
+  defaultValue: external

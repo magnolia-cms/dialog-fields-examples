@@ -1,0 +1,21 @@
+stationboard:
+  label: Station Board
+  $type: jsonMultiField
+  itemProvider:
+    $type: jsonMultiFieldProvider
+  field:
+    $type: jsonCompositeField
+    idPropertyName: name
+    properties:
+      name:
+        label: name
+        $type: textField
+        readOnly: true
+      to:
+        label: to
+        $type: textField
+        readOnly: true
+      operator:
+        label: operator
+        $type: textField
+        readOnly: true

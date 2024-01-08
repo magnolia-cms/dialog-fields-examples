@@ -1,0 +1,6 @@
+richText:
+  $type: richTextField
+  label: Text editor
+  height: 300
+  tables: true
+  source: true

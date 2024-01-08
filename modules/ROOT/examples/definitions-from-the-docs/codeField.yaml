@@ -1,0 +1,5 @@
+code:
+  $type: codeField
+  label: Code editor
+  height: 100
+  language: freemarker

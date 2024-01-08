@@ -1,0 +1,28 @@
+switchable:
+  $type: switchableField
+  label: Foo or bar options (switchableField)
+  field:
+    $type: radioButtonGroupField
+    layout: horizontal
+    datasource:
+      $type: optionListDatasource
+      options:
+        - name: foo
+          label: Foo
+          value: foo
+        - name: bar
+          label: Bar
+          value: bar
+  itemProvider:
+    $type: jcrChildNodeProvider
+  forms:
+    - name: foo
+      properties:
+        foo:
+          $type: textField
+          label: Foo text
+    - name: bar
+      properties:
+        bar:
+          $type: richTextField
+          label: Bar rich text

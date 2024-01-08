@@ -1,0 +1,6 @@
+resourceLink:
+  $type: resourceLinkField
+  label: Resource link
+  showOptions: true
+  textInputAllowed: true
+  filteringMode: CONTAINS

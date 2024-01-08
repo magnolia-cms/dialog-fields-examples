@@ -1,0 +1,9 @@
+radioGroup:
+  $type: radioButtonGroupField
+  label: Contacts
+  datasource:
+    $type: jcrDatasource
+    workspace: contacts
+    describeByProperty: lastName
+    allowedNodeTypes:
+      - mgnl:contact

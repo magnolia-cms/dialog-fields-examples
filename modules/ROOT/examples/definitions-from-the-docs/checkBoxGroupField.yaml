@@ -1,0 +1,24 @@
+checkboxGroup:
+  $type: checkBoxGroupField
+  label: Composers (checkBoxGroupField)
+  defaultValue: # an alternative way of setting multiple default values
+    - Mahler
+    - Bach
+  datasource:
+    $type: optionListDatasource
+    options:
+      - name: Vivaldi
+        label: Vivaldi
+        value: Vivaldi
+      - name: Bach
+        label: Bach
+        value: Bach
+      - name: Bartok
+        label: Bartok
+        value: Bartok
+      - name: Stravinsky
+        label: Stravinsky
+        value: Stravinsky
+      - name: Mahler
+        label: Mahler
+        value: Mahler
