@@ -9,10 +9,13 @@ form:
       height: 100
       language: freemarker
     # End of codeField example in the docs
+    # Start of the passwordField example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Password-field.html#_example_definition
     password:
       $type: passwordField
       label: Password
       required: true
+    # End of passwordField example in the docs
     # Start of the richTextField example in the docs
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Rich-text-field.html#_example_definition
     richText:
@@ -30,6 +33,8 @@ form:
       rows: 5
       maxLength: 300
     # End of textField example in the docs
+    # Start of the Email example in the docs
+    # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/Field-validators.html#_example_definition
     email:
       $type: textField
       label: Email (with emailValidator)
@@ -38,6 +43,7 @@ form:
         email:
           $type: emailValidator
           errorMessage: Enter a valid email address
+    # End of Email example in the docs
     # Start of the hiddenField example in the docs
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Hidden-field.html#_example_definition
     hidden:

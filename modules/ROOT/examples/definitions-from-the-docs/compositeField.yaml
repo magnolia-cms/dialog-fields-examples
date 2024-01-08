@@ -1,0 +1,12 @@
+composite:
+  $type: compositeField
+  label: Location (compositeField)
+  itemProvider:
+    $type: jcrChildNodeProvider
+  properties:
+    city:
+      label: City
+      $type: textField
+    country:
+      label: Country
+      $type: textField
