@@ -1,0 +1,8 @@
+email:
+  $type: textField
+  label: Email (with emailValidator)
+  required: true
+  validators:
+    email:
+      $type: emailValidator
+      errorMessage: Enter a valid email address
