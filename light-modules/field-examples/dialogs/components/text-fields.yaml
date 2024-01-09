@@ -28,8 +28,8 @@ form:
     # Start of the textField example in the docs
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Text-field.html#_example_definition
     text:
-      $type: textField 
-      label: Body (textField)
+      $type: textField
+      label: Body
       rows: 5
       maxLength: 300
     # End of textField example in the docs
@@ -37,7 +37,7 @@ form:
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/Field-validators.html#_example_definition
     email:
       $type: textField
-      label: Email (with emailValidator)
+      label: Email
       required: true
       validators:
         email:
@@ -55,6 +55,6 @@ form:
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Static-field.html#_example_definition
     static:
       $type: staticField
-      label: Description (staticField)
+      label: Description
       value: Used on search engine result pages...
     # End of staticField example in the docs

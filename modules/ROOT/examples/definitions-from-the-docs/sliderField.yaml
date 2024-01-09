@@ -1,6 +1,6 @@
 slider:
   $type: sliderField
-  label: Percentage (sliderField)
+  label: Percentage
   defaultValue: 50
   stepSize: 5
   displayStepSize: 25

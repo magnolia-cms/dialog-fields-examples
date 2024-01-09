@@ -1,6 +1,6 @@
 switchable:
   $type: switchableField
-  label: Foo or bar options (switchableField)
+  label: Foo or bar options
   field:
     $type: radioButtonGroupField
     layout: horizontal

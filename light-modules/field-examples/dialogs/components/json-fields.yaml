@@ -5,7 +5,7 @@ form:
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Link-field.html#_example_definitions
     jsonLink:
       $type: jsonLinkField
-      label: JSON Google Maps link (jsonLinkField)
+      label: Google Maps link
       chooserId: field-examples:components/json-chooser
       datasource:
         name: rest
@@ -20,7 +20,7 @@ form:
     # Start of the jsonComboBoxField example in the docs
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Combobox-field.html#_json_combobox_field
     comboBoxFieldwithJSON:
-      label: Country (JSON comboBoxField)
+      label: Country
       $type: jsonComboBoxField
       textInputAllowed: true
       filteringMode: CONTAINS
@@ -34,32 +34,3 @@ form:
           items: '$.*'
           describeBy: '$.name.common'
     # End of jsonComboBoxField example in the docs
-          # itemId: '$.name.official'
-          # items: '$.*'
-          # describeBy: '$.name.official'
-    # jsonComposite:
-    #   $type: jsonCompositeField
-    #   idPropertyName: name
-    #   properties:
-    #     name:
-    #       label: name
-    #       $type: textField
-    #       readOnly: true
-    #     to:
-    #       label: to
-    #       $type: textField
-    #       readOnly: true
-    # stationboard:
-    #   $type: jsonMultiField
-    #   itemProvider:
-    #     $type: jsonMultiFieldProvider
-    #   field:
-    #     $type: jsonCompositeField
-    #     idPropertyName: name
-    #     properties:
-    #       name:
-    #         $type: textField
-    #         readOnly: true
-    #       to:
-    #         $type: textField
-    #         readOnly: true

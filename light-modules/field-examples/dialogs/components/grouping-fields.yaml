@@ -5,7 +5,7 @@ form:
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Composite-field.html#_composite_field
     composite:
       $type: compositeField
-      label: Location (compositeField)
+      label: Location
       itemProvider:
         $type: jcrChildNodeProvider
       properties:
@@ -32,7 +32,7 @@ form:
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Multi-field.html#_example_definitions
     jcrMultiLinkField:
       $type: jcrMultiLinkField
-      label: Multi-link field (pages)
+      label: Multi-link field
       field:
         $type: linkField
         label: Page
@@ -41,7 +41,7 @@ form:
           workspace: website
     damMultiLinkField:
       $type: jcrMultiLinkField
-      label: Multi-link field (assets)
+      label: Multi-link field
       chooserId: dam-app-core:multiChooser
       field:
         $type: damLinkField
@@ -52,7 +52,7 @@ form:
     multi:
       i18n: true
       $type: jcrMultiField
-      label: Address list (jcrMultiField)
+      label: Address list
       field:
         $type: compositeField
         label: Address

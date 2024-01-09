@@ -1,6 +1,6 @@
 email:
   $type: textField
-  label: Email (with emailValidator)
+  label: Email
   required: true
   validators:
     email:

@@ -1,6 +1,6 @@
 composite:
   $type: compositeField
-  label: Location (compositeField)
+  label: Location
   itemProvider:
     $type: jcrChildNodeProvider
   properties:
