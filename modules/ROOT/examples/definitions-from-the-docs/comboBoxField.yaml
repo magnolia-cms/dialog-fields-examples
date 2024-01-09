@@ -1,6 +1,6 @@
 comboSelect:
   $type: comboBoxField
-  label: Prefix (comboBoxField)
+  label: Prefix
   datasource:
     $type: optionListDatasource
     options:

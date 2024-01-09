@@ -3,14 +3,14 @@ field:
   idPropertyName: name
   properties:
     name:
-      label: name
+      label: Name
       $type: textField
       readOnly: true
     to:
-      label: to
+      label: To
       $type: textField
       readOnly: true
     operator:
-      label: operator
+      label: Operator
       $type: textField
       readOnly: true

@@ -1,5 +1,5 @@
 text:
   $type: textField
-  label: Body (textField)
+  label: Body
   rows: 5
   maxLength: 300

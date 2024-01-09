@@ -1,7 +1,7 @@
 multi:
   i18n: true
   $type: jcrMultiField
-  label: Address list (jcrMultiField)
+  label: Address list
   field:
     $type: compositeField
     label: Address

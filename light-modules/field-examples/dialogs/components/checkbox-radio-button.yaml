@@ -12,7 +12,7 @@ form:
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Checkbox-group-field.html#_example_definition
     checkboxGroup:
       $type: checkBoxGroupField
-      label: Composers (checkBoxGroupField)
+      label: Composers
       defaultValue: # an alternative way of setting multiple default values
         - Mahler
         - Bach

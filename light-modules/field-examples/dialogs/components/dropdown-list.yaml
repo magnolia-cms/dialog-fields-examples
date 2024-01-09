@@ -7,7 +7,7 @@ form:
       $type: pageLinkField
       label: Page link
       showOptions: true
-      textInputAllowed: true  
+      textInputAllowed: true
       filteringMode: CONTAINS
       converterClass: info.magnolia.ui.editor.converter.JcrNodeToPathConverter
     # End of pageLinkField example in the docs
@@ -24,7 +24,7 @@ form:
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Combobox-field.html#_combobox_field
     comboSelect:
       $type: comboBoxField
-      label: Prefix (comboBoxField)
+      label: Prefix
       datasource:
         $type: optionListDatasource
         options:

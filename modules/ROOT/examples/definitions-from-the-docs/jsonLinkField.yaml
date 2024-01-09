@@ -1,6 +1,6 @@
 jsonLink:
   $type: jsonLinkField
-  label: JSON Google Maps link (jsonLinkField)
+  label: Google Maps link
   chooserId: field-examples:components/json-chooser
   datasource:
     name: rest

@@ -1,6 +1,6 @@
 listSelect:
   $type: listSelectField
-  label: Contacts (listSelectField)
+  label: Contacts
   datasource:
     $type: jcrDatasource
     workspace: contacts

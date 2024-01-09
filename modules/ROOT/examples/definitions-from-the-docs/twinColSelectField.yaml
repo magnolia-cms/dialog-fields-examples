@@ -1,6 +1,6 @@
 twinSelect:
   $type: twinColSelectField
-  label: Groups (twinColSelectField)
+  label: Groups
   leftColumnCaption: "Available groups"
   rightColumnCaption: "User is member of"
   datasource:

@@ -1,6 +1,6 @@
 checkboxGroup:
   $type: checkBoxGroupField
-  label: Composers (checkBoxGroupField)
+  label: Composers
   defaultValue: # an alternative way of setting multiple default values
     - Mahler
     - Bach

@@ -5,7 +5,7 @@ form:
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/List-field.html#_example_definition
     listSelect:
       $type: listSelectField
-      label: Contacts (listSelectField)
+      label: Contacts
       datasource:
         $type: jcrDatasource
         workspace: contacts
@@ -17,7 +17,7 @@ form:
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Twin-column-field.html#_example_definition
     twinSelect:
       $type: twinColSelectField
-      label: Groups (twinColSelectField)
+      label: Groups
       leftColumnCaption: "Available groups"
       rightColumnCaption: "User is member of"
       datasource:
@@ -30,7 +30,7 @@ form:
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Token-field.html#_example_definition
     tokens:
       $type: tokenField
-      label: Tokens (tokenField)
+      label: Tokens
       i18n: true
       description: description
       comboBox:
