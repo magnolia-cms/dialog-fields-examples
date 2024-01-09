@@ -3,11 +3,14 @@
 # to the light-modules/field-examples/dialogs/components folder.
 #
 # Usage:
-# Run it in the definitions-from-the-docs folder
+# Run it from the bin folder (relative path variables at the start of the script).
 # The command is:
-#   python3 sync-includes-to-light-modules.py
+#   python3 copy-fields-to-light-modules.py
 #
 # Note: It comments each field with a link to the respective docs page online.
+
+relative_path_to_examples = "../examples/definitions-from-the-docs/"
+relative_path_to_light_modules_dialogs_subfolder = "../../../light-modules/field-examples/dialogs/components/"
 
 
 # -----------------------------------------------------------------------------------------
@@ -18,15 +21,15 @@ import os
 data = data2 = data3 = "";
  
 # Reading data from file1
-with open('checkBoxField.yaml') as fp:
+with open(relative_path_to_examples + 'checkBoxField.yaml') as fp:
     data = fp.read()
  
 # Reading data from file2
-with open('checkBoxGroupField.yaml') as fp:
+with open(relative_path_to_examples + 'checkBoxGroupField.yaml') as fp:
     data2 = fp.read()
 
 # Reading data from file3
-with open('radioButtonGroupField.yaml') as fp:
+with open(relative_path_to_examples + 'radioButtonGroupField.yaml') as fp:
     data3 = fp.read()
  
 # Merging 3 files
@@ -42,7 +45,7 @@ data += data3
 with open ('combined-fields.yaml', 'w') as fp:
     fp.write(data)
 
-with open('combined-fields.yaml') as infile, open('../../../../light-modules/field-examples/dialogs/components/checkbox-radio-button.yaml', 'w') as outfile:
+with open('combined-fields.yaml') as infile, open(relative_path_to_light_modules_dialogs_subfolder + 'checkbox-radio-button.yaml', 'w') as outfile:
     print('form:', file=outfile)
     print('  properties:', file=outfile)
     print('    populate: false', file=outfile)
@@ -59,19 +62,19 @@ import os
 data = data2 = data3 = data4 = "";
  
 # Reading data from file1
-with open('linkField.yaml') as fp:
+with open(relative_path_to_examples + 'linkField.yaml') as fp:
     data = fp.read()
  
 # Reading data from file2
-with open('damLinkField.yaml') as fp:
+with open(relative_path_to_examples + 'damLinkField.yaml') as fp:
     data2 = fp.read()
 
 # Reading data from file3
-with open('External-link-or-page-link.yaml') as fp:
+with open(relative_path_to_examples + 'External-link-or-page-link.yaml') as fp:
     data3 = fp.read()
 
 # Reading data from file4
-with open('uploadField.yaml') as fp:
+with open(relative_path_to_examples + 'uploadField.yaml') as fp:
     data4 = fp.read()
  
 # Merging 4 files
@@ -90,7 +93,7 @@ data += data4
 with open ('combined-fields.yaml', 'w') as fp:
     fp.write(data)
 
-with open('combined-fields.yaml') as infile, open('../../../../light-modules/field-examples/dialogs/components/chooser-fields.yaml', 'w') as outfile:
+with open('combined-fields.yaml') as infile, open(relative_path_to_light_modules_dialogs_subfolder + 'chooser-fields.yaml', 'w') as outfile:
     print('form:', file=outfile)
     print('  properties:', file=outfile)
     print('    populate: false', file=outfile)
@@ -107,15 +110,15 @@ import os
 data = data2 = data3 = "";
  
 # Reading data from file1
-with open('pageLinkField.yaml') as fp:
+with open(relative_path_to_examples + 'pageLinkField.yaml') as fp:
     data = fp.read()
  
 # Reading data from file2
-with open('resourceLinkField.yaml') as fp:
+with open(relative_path_to_examples + 'resourceLinkField.yaml') as fp:
     data2 = fp.read()
 
 # Reading data from file3
-with open('comboBoxField.yaml') as fp:
+with open(relative_path_to_examples + 'comboBoxField.yaml') as fp:
     data3 = fp.read()
  
 # Merging 3 files
@@ -131,7 +134,7 @@ data += data3
 with open ('combined-fields.yaml', 'w') as fp:
     fp.write(data)
 
-with open('combined-fields.yaml') as infile, open('../../../../light-modules/field-examples/dialogs/components/dropdown-list.yaml', 'w') as outfile:
+with open('combined-fields.yaml') as infile, open(relative_path_to_light_modules_dialogs_subfolder + 'dropdown-list.yaml', 'w') as outfile:
     print('form:', file=outfile)
     print('  properties:', file=outfile)
     print('    populate: false', file=outfile)
@@ -148,19 +151,19 @@ import os
 data = data2 = data3 = data4 = "";
  
 # Reading data from file1
-with open('compositeField.yaml') as fp:
+with open(relative_path_to_examples + 'compositeField.yaml') as fp:
     data = fp.read()
  
 # Reading data from file2
-with open('jcrMultiValueField.yaml') as fp:
+with open(relative_path_to_examples + 'jcrMultiValueField.yaml') as fp:
     data2 = fp.read()
 
 # Reading data from file3
-with open('jcrMultiLinkField.yaml') as fp:
+with open(relative_path_to_examples + 'jcrMultiLinkField.yaml') as fp:
     data3 = fp.read()
 
 # Reading data from file4
-with open('jcrMultiField.yaml') as fp:
+with open(relative_path_to_examples + 'jcrMultiField.yaml') as fp:
     data4 = fp.read()
  
 # Merging 4 files
@@ -179,7 +182,7 @@ data += data4
 with open ('combined-fields.yaml', 'w') as fp:
     fp.write(data)
 
-with open('combined-fields.yaml') as infile, open('../../../../light-modules/field-examples/dialogs/components/grouping-fields.yaml', 'w') as outfile:
+with open('combined-fields.yaml') as infile, open(relative_path_to_light_modules_dialogs_subfolder + 'grouping-fields.yaml', 'w') as outfile:
     print('form:', file=outfile)
     print('  properties:', file=outfile)
     print('    populate: false', file=outfile)
@@ -196,11 +199,11 @@ import os
 data = data2 = "";
  
 # Reading data from file1
-with open('jsonLinkField.yaml') as fp:
+with open(relative_path_to_examples + 'jsonLinkField.yaml') as fp:
     data = fp.read()
  
 # Reading data from file2
-with open('jsonComboBoxField.yaml') as fp:
+with open(relative_path_to_examples + 'jsonComboBoxField.yaml') as fp:
     data2 = fp.read()
  
 # Merging 2 files
@@ -213,7 +216,7 @@ data += data2
 with open ('combined-fields.yaml', 'w') as fp:
     fp.write(data)
 
-with open('combined-fields.yaml') as infile, open('../../../../light-modules/field-examples/dialogs/components/json-fields.yaml', 'w') as outfile:
+with open('combined-fields.yaml') as infile, open(relative_path_to_light_modules_dialogs_subfolder + 'json-fields.yaml', 'w') as outfile:
     print('form:', file=outfile)
     print('  properties:', file=outfile)
     print('    populate: false', file=outfile)
@@ -230,15 +233,15 @@ import os
 data = data2 = data3 = "";
  
 # Reading data from file1
-with open('listSelectField.yaml') as fp:
+with open(relative_path_to_examples + 'listSelectField.yaml') as fp:
     data = fp.read()
  
 # Reading data from file2
-with open('twinColSelectField.yaml') as fp:
+with open(relative_path_to_examples + 'twinColSelectField.yaml') as fp:
     data2 = fp.read()
 
 # Reading data from file3
-with open('tokenField.yaml') as fp:
+with open(relative_path_to_examples + 'tokenField.yaml') as fp:
     data3 = fp.read()
  
 # Merging 3 files
@@ -254,7 +257,7 @@ data += data3
 with open ('combined-fields.yaml', 'w') as fp:
     fp.write(data)
 
-with open('combined-fields.yaml') as infile, open('../../../../light-modules/field-examples/dialogs/components/select-fields.yaml', 'w') as outfile:
+with open('combined-fields.yaml') as infile, open(relative_path_to_light_modules_dialogs_subfolder + 'select-fields.yaml', 'w') as outfile:
     print('form:', file=outfile)
     print('  properties:', file=outfile)
     print('    populate: false', file=outfile)
@@ -271,15 +274,15 @@ import os
 data = data2 = data3 = "";
  
 # Reading data from file1
-with open('dateField.yaml') as fp:
+with open(relative_path_to_examples + 'dateField.yaml') as fp:
     data = fp.read()
  
 # Reading data from file2
-with open('switchableField.yaml') as fp:
+with open(relative_path_to_examples + 'switchableField.yaml') as fp:
     data2 = fp.read()
 
 # Reading data from file3
-with open('sliderField.yaml') as fp:
+with open(relative_path_to_examples + 'sliderField.yaml') as fp:
     data3 = fp.read()
  
 # Merging 3 files
@@ -295,7 +298,7 @@ data += data3
 with open ('combined-fields.yaml', 'w') as fp:
     fp.write(data)
 
-with open('combined-fields.yaml') as infile, open('../../../../light-modules/field-examples/dialogs/components/switchable-slider-picker.yaml', 'w') as outfile:
+with open('combined-fields.yaml') as infile, open(relative_path_to_light_modules_dialogs_subfolder + 'switchable-slider-picker.yaml', 'w') as outfile:
     print('form:', file=outfile)
     print('  properties:', file=outfile)
     print('    populate: false', file=outfile)
@@ -312,31 +315,31 @@ import os
 data = data2 = data3 = data4 = data5 = data6 = data7 = "";
  
 # Reading data from file1
-with open('codeField.yaml') as fp:
+with open(relative_path_to_examples + 'codeField.yaml') as fp:
     data = fp.read()
  
 # Reading data from file2
-with open('passwordField.yaml') as fp:
+with open(relative_path_to_examples + 'passwordField.yaml') as fp:
     data2 = fp.read()
 
 # Reading data from file3
-with open('richTextField.yaml') as fp:
+with open(relative_path_to_examples + 'richTextField.yaml') as fp:
     data3 = fp.read()
 
 # Reading data from file4
-with open('textField.yaml') as fp:
+with open(relative_path_to_examples + 'textField.yaml') as fp:
     data4 = fp.read()
 
 # Reading data from file5
-with open('emailValidator.yaml') as fp:
+with open(relative_path_to_examples + 'emailValidator.yaml') as fp:
     data5 = fp.read()
 
 # Reading data from file6
-with open('hiddenField.yaml') as fp:
+with open(relative_path_to_examples + 'hiddenField.yaml') as fp:
     data6 = fp.read()
 
 # Reading data from file7
-with open('staticField.yaml') as fp:
+with open(relative_path_to_examples + 'staticField.yaml') as fp:
     data7 = fp.read()
 
 # Merging 7 files
@@ -364,7 +367,7 @@ data += data7
 with open ('combined-fields.yaml', 'w') as fp:
     fp.write(data)
 
-with open('combined-fields.yaml') as infile, open('../../../../light-modules/field-examples/dialogs/components/text-fields.yaml', 'w') as outfile:
+with open('combined-fields.yaml') as infile, open(relative_path_to_light_modules_dialogs_subfolder + 'text-fields.yaml', 'w') as outfile:
     print('form:', file=outfile)
     print('  properties:', file=outfile)
     print('    populate: false', file=outfile)
