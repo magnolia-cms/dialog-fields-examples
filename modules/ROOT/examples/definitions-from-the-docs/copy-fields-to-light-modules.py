@@ -1,4 +1,16 @@
 # -----------------------------------------------------------------------------------------
+# This script copies all fields used in the docs from the definitions-from-the-docs folder
+# to the light-modules/field-examples/dialogs/components folder.
+#
+# Usage:
+# Run it in the definitions-from-the-docs folder
+# The command is:
+#   python3 sync-includes-to-light-modules.py
+#
+# Note: It comments each field with a link to the respective docs page online.
+
+
+# -----------------------------------------------------------------------------------------
 # checkbox-radio-button.yaml
 
 import os
