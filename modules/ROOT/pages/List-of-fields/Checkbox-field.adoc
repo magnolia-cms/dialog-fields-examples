@@ -23,5 +23,3 @@ include::6.2@dialog-fields-examples:ROOT:example$definitions-from-the-docs/check
 include::6.2@dialog-fields-examples:ROOT:partial$JS-preview-block.adoc[]
 
 == Field properties
-
-=== Field-specific properties
