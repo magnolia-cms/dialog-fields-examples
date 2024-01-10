@@ -43,5 +43,5 @@ CKEDITOR.editorConfig = function( config ) {
  config.specialChars = [
     ['&trade;','Trade mark'],
     ['&nbsp;','NB Space'],
-    ['&#9660;','PV Triangle']]; 
+    ['&#9660;','Black Down-Pointing Triangle']];
 };
