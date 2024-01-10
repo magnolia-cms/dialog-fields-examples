@@ -1,1 +1,3 @@
-* xref:dialog-fields-examples:ROOT:index.adoc[]
+* xref:6.2@dialog-fields-examples:ROOT:index.adoc[]
+** xref:6.2@dialog-fields-examples:ROOT:List-of-fields/Checkbox-field.adoc[]
+** xref:6.2@dialog-fields-examples:ROOT:List-of-fields/Code-field.adoc[]
