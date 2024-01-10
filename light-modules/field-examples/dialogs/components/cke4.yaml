@@ -1,0 +1,16 @@
+form:
+  properties:
+    richText:
+      $type: richTextField
+      label: Magnolia default CKEditor
+      height: 300
+      tables: true
+      source: true
+      colors: 00923E,F8C100,28166F
+      fonts: Arial/Arial,sans-serif;Times New Roman/Times New Roman,serif;Verdana
+      fontSizes: 16/16px;24/24px;48/48px
+      images: true
+    custom_richText:
+      $type: richTextField
+      label: Customized CKEditor
+      configJsFile: /.resources/field-examples/webresources/ckeditor/config-magnolia-extended.js

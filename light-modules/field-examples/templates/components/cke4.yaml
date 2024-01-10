@@ -1,0 +1,4 @@
+title: CKEditor text fields
+renderType: freemarker
+templateScript: /field-examples/templates/components/cke4.ftl
+dialog: field-examples:components/cke4
