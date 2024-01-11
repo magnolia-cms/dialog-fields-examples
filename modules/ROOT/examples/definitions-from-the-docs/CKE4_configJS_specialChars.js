@@ -1,4 +1,4 @@
 config.specialChars = [
-    ['&trade;','Trade mark'],
+    ['&trade;','Trademark'],
     ['&nbsp;','NB Space'],
     ['&#9660;','Black Down-Pointing Triangle']];
