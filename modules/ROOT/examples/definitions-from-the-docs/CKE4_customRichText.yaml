@@ -1,0 +1,4 @@
+custom_richText:
+  $type: richTextField
+  label: Customized CKEditor
+  configJsFile: /.resources/field-examples/webresources/ckeditor/config-magnolia-extended.js

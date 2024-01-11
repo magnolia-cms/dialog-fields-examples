@@ -25,6 +25,8 @@ areas:
         id: field-examples:components/text-fields
       select-fields:
         id: field-examples:components/select-fields
+      cke4:
+        id: field-examples:components/cke4
     inheritance:
       enabled: true
       components: filtered
