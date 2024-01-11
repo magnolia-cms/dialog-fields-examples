@@ -80,7 +80,7 @@ subApps:
 
     # Start of the jsonMultiField example in the docs
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Multi-field.html#_example_definitions
-    stationboard:
+        stationboard:
           label: Station Board
           $type: jsonMultiField
           itemProvider:
