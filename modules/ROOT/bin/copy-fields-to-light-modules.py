@@ -10,7 +10,7 @@
 # Note: It comments each field with a link to the respective docs page online.
 
 relative_path_to_examples = "../examples/definitions-from-the-docs/"
-relative_path_to_light_modules_dialogs_subfolder = "../../../light-modules/field-examples/dialogs/components/"
+relative_path_to_light_modules_dialogs_subfolder = "../../../light-modules/field-examples-copy/dialogs/components/"
 
 
 # -----------------------------------------------------------------------------------------
