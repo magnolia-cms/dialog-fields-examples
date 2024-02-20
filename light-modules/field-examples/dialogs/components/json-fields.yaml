@@ -16,6 +16,7 @@ form:
           itemId: '$.maps.googleMaps'
           items: '$.*'
           describeBy: '$.maps.googleMaps'
+      defaultValue: 'https://goo.gl/maps/FoDtc3UKMkFsXAjHA' # string
     # End of jsonLinkField example in the docs
     # Start of the jsonComboBoxField example in the docs
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Combobox-field.html#_json_combobox_field
@@ -33,4 +34,5 @@ form:
           itemId: '$.name.common'
           items: '$.*'
           describeBy: '$.name.common'
+      defaultValue: United Kingdom
     # End of jsonComboBoxField example in the docs

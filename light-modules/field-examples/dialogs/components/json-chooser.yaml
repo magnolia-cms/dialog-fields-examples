@@ -12,6 +12,6 @@ workbenchChooser:
         $type: listView
         readOnly: true
         columns:
-          commonName: 
+          commonName:
             name: name.common
             # Column filtering is not supported in REST-based elements of the UI.

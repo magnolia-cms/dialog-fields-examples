@@ -1,0 +1,3 @@
+pageLinkPath:
+  $type: pageLinkField
+  defaultValue: /Field-examples # path
