@@ -1,0 +1,3 @@
+pageLinkUUID:
+  $type: pageLinkField
+  defaultValue: a6ec3630-2701-4993-8372-18dc70f99b3e # UUID

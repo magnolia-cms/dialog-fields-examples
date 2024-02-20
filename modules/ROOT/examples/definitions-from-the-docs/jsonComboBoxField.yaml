@@ -1,6 +1,6 @@
 comboBoxFieldwithJSON:
-  label: Country
   $type: jsonComboBoxField
+  label: Country
   textInputAllowed: true
   filteringMode: CONTAINS
   datasource:

@@ -1,0 +1,46 @@
+'Field-examples':
+  'hideInNav': false
+  'jcr:primaryType': 'mgnl:page'
+  'jcr:uuid': 'baec7ec4-8363-49e7-b331-8684b5ae9885'
+  'mgnl:created': 2024-02-19T17:25:38.782+01:00
+  'mgnl:createdBy': 'superuser'
+  'mgnl:lastModified': 2024-02-20T11:38:48.448+01:00
+  'mgnl:lastModifiedBy': 'superuser'
+  'mgnl:template': 'field-examples:pages/fields'
+  'title': 'Examples of default values'
+  'main':
+    'jcr:primaryType': 'mgnl:area'
+    'jcr:uuid': '2395c6ab-0152-4283-9df7-a975923146c6'
+    'mgnl:created': 2024-02-19T17:25:56.690+01:00
+    'mgnl:createdBy': 'superuser'
+    'mgnl:lastModified': 2024-02-20T11:38:48.448+01:00
+    'mgnl:lastModifiedBy': 'superuser'
+    '0':
+      'jcr:primaryType': 'mgnl:component'
+      'jcr:uuid': 'e192891b-68c8-446b-a7b4-d403f9c0ad5d'
+      'mgnl:created': 2024-02-19T17:26:38.503+01:00
+      'mgnl:createdBy': 'superuser'
+      'mgnl:lastModified': 2024-02-19T17:39:39.588+01:00
+      'mgnl:lastModifiedBy': 'superuser'
+      'mgnl:template': 'field-examples:components/dropdown-list'
+      'pageLink': '/Field-examples'
+      'resourceLink': '/Field-examples'
+    '00':
+      'externalLinkOrPageLink': 'a6ec3630-2701-4993-8372-18dc70f99b3e'
+      'jcr:primaryType': 'mgnl:component'
+      'jcr:uuid': 'd7faa3b0-4aa0-4203-a27f-1c4ef036406e'
+      'mgnl:created': 2024-02-19T17:26:51.518+01:00
+      'mgnl:createdBy': 'superuser'
+      'mgnl:lastModified': 2024-02-19T17:26:51.518+01:00
+      'mgnl:lastModifiedBy': 'superuser'
+      'mgnl:template': 'field-examples:components/chooser-fields'
+    '01':
+      'comboBoxFieldwithJSON': 'United Kingdom'
+      'jcr:primaryType': 'mgnl:component'
+      'jcr:uuid': '13785110-4d64-4042-a674-1e89f200dff5'
+      'jsonLink': 'https://goo.gl/maps/FoDtc3UKMkFsXAjHA'
+      'mgnl:created': 2024-02-20T11:38:55.272+01:00
+      'mgnl:createdBy': 'superuser'
+      'mgnl:lastModified': 2024-02-20T11:38:55.272+01:00
+      'mgnl:lastModifiedBy': 'superuser'
+      'mgnl:template': 'field-examples:components/json-fields'

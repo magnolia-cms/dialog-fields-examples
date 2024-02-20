@@ -1,0 +1,3 @@
+jsonLinkString:
+  $type: jsonLinkField
+  defaultValue: 'https://goo.gl/maps/FoDtc3UKMkFsXAjHA' # string

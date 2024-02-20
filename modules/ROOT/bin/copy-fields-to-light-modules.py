@@ -10,7 +10,7 @@
 # Note: It comments each field with a link to the respective docs page online.
 
 relative_path_to_examples = "../examples/definitions-from-the-docs/"
-relative_path_to_light_modules_dialogs_subfolder = "../../../light-modules/field-examples/dialogs/components/"
+relative_path_to_light_modules_dialogs_subfolder = "../../../light-modules/field-examples-copy/dialogs/components/"
 
 
 # -----------------------------------------------------------------------------------------
@@ -19,11 +19,11 @@ relative_path_to_light_modules_dialogs_subfolder = "../../../light-modules/field
 import os
 
 data = data2 = data3 = "";
- 
+
 # Reading data from file1
 with open(relative_path_to_examples + 'checkBoxField.yaml') as fp:
     data = fp.read()
- 
+
 # Reading data from file2
 with open(relative_path_to_examples + 'checkBoxGroupField.yaml') as fp:
     data2 = fp.read()
@@ -31,7 +31,7 @@ with open(relative_path_to_examples + 'checkBoxGroupField.yaml') as fp:
 # Reading data from file3
 with open(relative_path_to_examples + 'radioButtonGroupField.yaml') as fp:
     data3 = fp.read()
- 
+
 # Merging 3 files
 data = "# Start of the checkBoxField example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Checkbox-field.html#_example_definition\n" + data
 data += "\n# End of checkBoxField example in the docs"
@@ -59,12 +59,12 @@ os.remove("combined-fields.yaml")
 
 import os
 
-data = data2 = data3 = data4 = "";
- 
+data = data2 = data3 = data4 = data5 = data6 = "";
+
 # Reading data from file1
 with open(relative_path_to_examples + 'linkField.yaml') as fp:
     data = fp.read()
- 
+
 # Reading data from file2
 with open(relative_path_to_examples + 'damLinkField.yaml') as fp:
     data2 = fp.read()
@@ -76,15 +76,23 @@ with open(relative_path_to_examples + 'External-link-or-page-link.yaml') as fp:
 # Reading data from file4
 with open(relative_path_to_examples + 'uploadField.yaml') as fp:
     data4 = fp.read()
- 
+
+# Reading default value from the last line of External-link-or-page-link_defaultValue.yaml
+with open(relative_path_to_examples + 'External-link-or-page-link_defaultValue.yaml', 'r') as f:
+    data5 = f.readlines()[-1]
+
+# Reading default value from the last line of damLinkField_defaultValue.yaml
+with open(relative_path_to_examples + 'damLinkField_defaultValue.yaml', 'r') as f:
+    data6 = f.readlines()[-1]
+
 # Merging 4 files
 data = "# Start of the linkField example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Link-field.html#_example_definitions\n" + data
 data += "\n# End of linkField example in the docs"
-data2 = "\n# Start of the damLinkField example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Link-field.html#_example_definitions\n" + data2
+data2 = "\n# Start of the damLinkField example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Link-field.html#_example_definitions\n" + data2 + "\n" + data6
 data2 += "\n# End of damLinkField example in the docs"
-data3 = "\n# Start of the External link example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Link-field.html#_example_definitions\n" + data3
+data3 = "\n# Start of the External link example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Link-field.html#_example_definitions\n" + data3 + "\n" + data5
 data3 += "\n# End of External link example in the docs"
-data4 = "\n# Start of the uploadField example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Upload-field.html#_example_definition\n" + data4 
+data4 = "\n# Start of the uploadField example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Upload-field.html#_example_definition\n" + data4
 data4 += "\n# End of uploadField example in the docs"
 data += data2
 data += data3
@@ -107,12 +115,12 @@ os.remove("combined-fields.yaml")
 
 import os
 
-data = data2 = data3 = "";
- 
+data = data2 = data3 = data4 = data5 = "";
+
 # Reading data from file1
 with open(relative_path_to_examples + 'pageLinkField.yaml') as fp:
     data = fp.read()
- 
+
 # Reading data from file2
 with open(relative_path_to_examples + 'resourceLinkField.yaml') as fp:
     data2 = fp.read()
@@ -120,11 +128,19 @@ with open(relative_path_to_examples + 'resourceLinkField.yaml') as fp:
 # Reading data from file3
 with open(relative_path_to_examples + 'comboBoxField.yaml') as fp:
     data3 = fp.read()
- 
+
+# Reading default value from the last line of resourceLinkField_defaultValue.yaml
+with open(relative_path_to_examples + 'resourceLinkField_defaultValue.yaml', 'r') as f:
+    data4 = f.readlines()[-1]
+
+# Reading default value from the last line of pageLinkField_defaultValue.yaml
+with open(relative_path_to_examples + 'pageLinkField_defaultValue.yaml', 'r') as f:
+    data5 = f.readlines()[-1]
+
 # Merging 3 files
-data = "# Start of the pageLinkField example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Link-field.html#_example_definitions\n" + data
+data = "# Start of the pageLinkField example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Link-field.html#_example_definitions\n" + data + "\n" + data5
 data += "\n# End of pageLinkField example in the docs"
-data2 = "\n# Start of the resourceLinkField example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Link-field.html#_example_definitions\n" + data2
+data2 = "\n# Start of the resourceLinkField example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Link-field.html#_example_definitions\n" + data2 + "\n" + data4
 data2 += "\n# End of resourceLinkField example in the docs"
 data3 = "\n# Start of the comboBoxField example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Combobox-field.html#_combobox_field\n" + data3
 data3 += "\n# End of comboBoxField example in the docs"
@@ -149,11 +165,11 @@ os.remove("combined-fields.yaml")
 import os
 
 data = data2 = data3 = data4 = "";
- 
+
 # Reading data from file1
 with open(relative_path_to_examples + 'compositeField.yaml') as fp:
     data = fp.read()
- 
+
 # Reading data from file2
 with open(relative_path_to_examples + 'jcrMultiValueField.yaml') as fp:
     data2 = fp.read()
@@ -165,7 +181,7 @@ with open(relative_path_to_examples + 'jcrMultiLinkField.yaml') as fp:
 # Reading data from file4
 with open(relative_path_to_examples + 'jcrMultiField.yaml') as fp:
     data4 = fp.read()
- 
+
 # Merging 4 files
 data = "# Start of the compositeField example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Composite-field.html#_composite_field\n" + data
 data += "\n# End of compositeField example in the docs"
@@ -197,19 +213,28 @@ os.remove("combined-fields.yaml")
 import os
 
 data = data2 = "";
- 
+data3 = data4 = "";
+
 # Reading data from file1
 with open(relative_path_to_examples + 'jsonLinkField.yaml') as fp:
     data = fp.read()
- 
+
 # Reading data from file2
 with open(relative_path_to_examples + 'jsonComboBoxField.yaml') as fp:
     data2 = fp.read()
- 
+
+# Reading default value from the last line of jsonComboBoxField_defaultValue.yaml
+with open(relative_path_to_examples + 'jsonComboBoxField_defaultValue.yaml', 'r') as f:
+    data3 = f.readlines()[-1]
+
+# Reading default value from the last line of jsonLinkField_defaultValue.yaml
+with open(relative_path_to_examples + 'jsonLinkField_defaultValue.yaml', 'r') as f:
+    data4 = f.readlines()[-1]
+
 # Merging 2 files
-data = "# Start of the jsonLinkField example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Link-field.html#_example_definitions\n" + data
+data = "# Start of the jsonLinkField example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Link-field.html#_example_definitions\n" + data + "\n" + data4
 data += "\n# End of jsonLinkField example in the docs"
-data2 = "\n# Start of the jsonComboBoxField example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Combobox-field.html#_json_combobox_field\n" + data2
+data2 = "\n# Start of the jsonComboBoxField example in the docs\n# https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Combobox-field.html#_json_combobox_field\n" + data2 + "\n" + data3
 data2 += "\n# End of jsonComboBoxField example in the docs"
 data += data2
 

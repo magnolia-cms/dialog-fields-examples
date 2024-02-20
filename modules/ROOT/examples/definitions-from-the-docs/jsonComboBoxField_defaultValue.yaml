@@ -1,0 +1,3 @@
+jsonLinkString:
+  $type: jsonComboBoxField
+  defaultValue: United Kingdom

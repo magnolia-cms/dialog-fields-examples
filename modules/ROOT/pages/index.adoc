@@ -6,8 +6,15 @@
 
 It contains working field definitions to use out of the box. Follow the instructions below to use them in your local Magnolia installation.
 
-. Copy the `dialog-fields-examples` folder into your light-modules folder.
-. Go to the `Pages` app and add a test page using the `Field examples` template.
+. Set the content bootstrap folder and pattern in the `WEB-INF/config/default/magnolia.properties` file. For example:
++
+[source]
+----
+magnolia.content.bootstrap.dir=/<LIGHT-MODULE-FOLDER-LOCATION>/field-examples/bootstrap/data
+magnolia.content.bootstrap.pattern=*.{yaml,xml}
+----
+. Copy the `fields-examples` folder from the `dialog-fields-examples` repository into your light-modules folder.
+. Go to the `Pages` app and check that the `Field examples` page is successfully bootstrapped.
 . Edit the new page and add a new component. This opens a dialog showing all the component types available.
 +
 image::dialog-fields-examples:ROOT:field-examples_component-types.png["Add component dialog",role="zoom"]

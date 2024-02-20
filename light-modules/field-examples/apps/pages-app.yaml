@@ -1,0 +1,7 @@
+# https://docs.magnolia-cms.com/product-docs/6.2/Apps/App-configuration/Action-definition.html#_general_action_definition_classes
+# Default values can only be used if the populate property is set to false
+subApps:
+  detail:
+    actions:
+      editComponent:
+        populate: false
