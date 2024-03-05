@@ -1,0 +1,3 @@
+damLinkUUID:
+  $type: damLinkField
+  defaultValue: jcr:57ad85f2-e794-44a7-814f-271a51f41c26 # UUID with a prefix

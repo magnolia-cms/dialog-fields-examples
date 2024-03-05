@@ -17,6 +17,7 @@ form:
       label: DAM link
       textInputAllowed: true
       filteringMode: CONTAINS
+      defaultValue: jcr:57ad85f2-e794-44a7-814f-271a51f41c26 # UUID with a prefix
     # End of damLinkField example in the docs
     # Start of the External link example in the docs
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Link-field.html#_example_definitions
@@ -28,6 +29,7 @@ form:
       filteringMode: CONTAINS
       # this is the default chooser; you can configure your own with more or fewer columns
       chooserId: ui-framework-jcr:chooser
+      defaultValue: a6ec3630-2701-4993-8372-18dc70f99b3e # UUID
     # End of External link example in the docs
     # Start of the uploadField example in the docs
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Upload-field.html#_example_definition
