@@ -1,3 +1,0 @@
-title: All countries
-templateScript: /field-examples/templates/components/countries/allCountries.ftl
-renderType: freemarker

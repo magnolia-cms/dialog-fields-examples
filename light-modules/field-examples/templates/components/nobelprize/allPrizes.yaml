@@ -1,4 +1,4 @@
-title: Nobel prizes test page
+title: Nobel prizes winners in 2000
 templateScript: /field-examples/templates/components/nobelprize/allPrizes.ftl
 renderType: freemarker
 visible: true
