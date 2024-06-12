@@ -1,0 +1,6 @@
+baseUrl: https://api.dictionaryapi.dev/api/v2
+restCalls:
+  wordSearch:
+    class: info.magnolia.rest.client.call.GetRestCall
+    entityClass: com.fasterxml.jackson.databind.JsonNode
+    path: /entries/en/hello

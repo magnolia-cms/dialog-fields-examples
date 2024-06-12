@@ -16,7 +16,6 @@
       <h2>Test links</h2>
       <ul>
         <li><a href="http://api.nobelprize.org/2.0//nobelPrizes" target="_blank">http://api.nobelprize.org/2.0//nobelPrizes</a></li>
-        <li><a href="https://restcountries.com/v3.1/all" target="_blank">https://restcountries.com/v3.1/all</a></li>
         <li><a href="https://en.wikipedia.org/api/rest_v1/?spec" target="_blank">https://en.wikipedia.org/api/rest_v1/?spec</a></li>
       </ul>
       [@cms.area name="main"/]

@@ -1,13 +1,16 @@
 jsonLink:
   $type: jsonLinkField
-  label: Google Maps link
+  label: Nobel prize winner
+  showOptions: true
+  textInputAllowed: true
+  filteringMode: CONTAINS
   chooserId: field-examples:components/json-chooser
   datasource:
     name: rest
     $type: jsonDatasource
-    restClient: countries
-    restCall: allCountries
+    restClient: nobelprize
+    restCall: allPrizes
     jsonPathExpressions:
-      itemId: '$.maps.googleMaps'
-      items: '$.*'
-      describeBy: '$.maps.googleMaps'
+      itemId: '$.en'
+      items: '$.nobelPrizes[*].laureates[*].fullName'
+      describeBy: '$.en'

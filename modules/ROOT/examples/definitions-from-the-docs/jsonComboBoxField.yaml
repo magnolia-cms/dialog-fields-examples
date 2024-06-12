@@ -1,14 +1,14 @@
 comboBoxFieldwithJSON:
+  label: Definition example
   $type: jsonComboBoxField
-  label: Country
   textInputAllowed: true
   filteringMode: CONTAINS
   datasource:
     name: rest
     $type: jsonDatasource
-    restClient: countries
-    restCall: allCountries
+    restClient: books
+    restCall: wordSearch
     jsonPathExpressions:
-      itemId: '$.name.common'
-      items: '$.*'
-      describeBy: '$.name.common'
+      itemId: '$.definition'
+      items: '$..meanings[*].definitions[*]'
+      describeBy: '$.definition'
