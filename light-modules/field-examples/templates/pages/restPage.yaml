@@ -11,7 +11,5 @@ areas:
     availableComponents:
       allPrizes:
         id: field-examples:components/nobelprize/allPrizes
-      allCountries:
-        id: field-examples:components/countries/allCountries
       onthisday:
         id: field-examples:components/wiki/onthisday

@@ -13,5 +13,5 @@ workbenchChooser:
         readOnly: true
         columns:
           commonName:
-            name: name.common
+            name: en
             # Column filtering is not supported in REST-based elements of the UI.

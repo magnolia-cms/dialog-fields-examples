@@ -5,34 +5,37 @@ form:
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Link-field.html#_example_definitions
     jsonLink:
       $type: jsonLinkField
-      label: Google Maps link
+      label: Nobel prize winner
+      showOptions: true
+      textInputAllowed: true
+      filteringMode: CONTAINS
       chooserId: field-examples:components/json-chooser
       datasource:
         name: rest
         $type: jsonDatasource
-        restClient: countries
-        restCall: allCountries
+        restClient: nobelprize
+        restCall: allPrizes
         jsonPathExpressions:
-          itemId: '$.maps.googleMaps'
-          items: '$.*'
-          describeBy: '$.maps.googleMaps'
-      defaultValue: 'https://goo.gl/maps/FoDtc3UKMkFsXAjHA' # string
+          itemId: '$.en'
+          items: '$.nobelPrizes[*].laureates[*].fullName'
+          describeBy: '$.en'
+      defaultValue: 'Pieter Zeeman' # string
     # End of jsonLinkField example in the docs
     # Start of the jsonComboBoxField example in the docs
     # https://docs.magnolia-cms.com/product-docs/6.2/Developing/Templating/Dialog-definition/Field-definition/List-of-fields/Combobox-field.html#_json_combobox_field
     comboBoxFieldwithJSON:
-      label: Country
+      label: Definition example
       $type: jsonComboBoxField
       textInputAllowed: true
       filteringMode: CONTAINS
       datasource:
         name: rest
         $type: jsonDatasource
-        restClient: countries
-        restCall: allCountries
+        restClient: books
+        restCall: wordSearch
         jsonPathExpressions:
-          itemId: '$.name.common'
-          items: '$.*'
-          describeBy: '$.name.common'
-      defaultValue: United Kingdom
+          itemId: '$.definition'
+          items: '$..meanings[*].definitions[*]'
+          describeBy: '$.definition'
+      defaultValue: 'An expression of puzzlement or discovery.'
     # End of jsonComboBoxField example in the docs
